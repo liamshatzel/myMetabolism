@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8354E26A205440006EC99 /* LoginViewController.swift */; };
 		0EB8355126A205620006EC99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8355026A205620006EC99 /* HomeViewController.swift */; };
 		0EB8355626A214FD0006EC99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8355526A214FD0006EC99 /* Utilities.swift */; };
+		0EB8355826A218E00006EC99 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8355726A218E00006EC99 /* GoogleService-Info.plist */; };
+		0EB8355A26A23BAB0006EC99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8355926A23BAB0006EC99 /* Constants.swift */; };
+		71D928D9EE6D230A04EE482A /* Pods_MyMetabolism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEC87B1CF25B9AF8EC7B854 /* Pods_MyMetabolism.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,11 @@
 		0EB8354E26A205440006EC99 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0EB8355026A205620006EC99 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0EB8355526A214FD0006EC99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		0EB8355726A218E00006EC99 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0EB8355926A23BAB0006EC99 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AEEC87B1CF25B9AF8EC7B854 /* Pods_MyMetabolism.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMetabolism.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7EF0AF6D4EF3243B9B5E28 /* Pods-MyMetabolism.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMetabolism.release.xcconfig"; path = "Target Support Files/Pods-MyMetabolism/Pods-MyMetabolism.release.xcconfig"; sourceTree = "<group>"; };
+		D69F3F50263AB51BD5B90D6E /* Pods-MyMetabolism.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMetabolism.debug.xcconfig"; path = "Target Support Files/Pods-MyMetabolism/Pods-MyMetabolism.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D928D9EE6D230A04EE482A /* Pods_MyMetabolism.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,8 @@
 			children = (
 				0EB8353726A204E50006EC99 /* MyMetabolism */,
 				0EB8353626A204E50006EC99 /* Products */,
+				5AD8500D08483091EB347908 /* Pods */,
+				1EAD703940F3AA69192CB82B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +81,7 @@
 				0EB8354126A204E70006EC99 /* Assets.xcassets */,
 				0EB8354326A204E70006EC99 /* LaunchScreen.storyboard */,
 				0EB8354626A204E70006EC99 /* Info.plist */,
+				0EB8355726A218E00006EC99 /* GoogleService-Info.plist */,
 				0EB8355426A214C50006EC99 /* Helpers */,
 				0EB8355226A205660006EC99 /* View Controllers */,
 			);
@@ -91,8 +103,26 @@
 			isa = PBXGroup;
 			children = (
 				0EB8355526A214FD0006EC99 /* Utilities.swift */,
+				0EB8355926A23BAB0006EC99 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1EAD703940F3AA69192CB82B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEEC87B1CF25B9AF8EC7B854 /* Pods_MyMetabolism.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AD8500D08483091EB347908 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D69F3F50263AB51BD5B90D6E /* Pods-MyMetabolism.debug.xcconfig */,
+				CD7EF0AF6D4EF3243B9B5E28 /* Pods-MyMetabolism.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EB8354926A204E70006EC99 /* Build configuration list for PBXNativeTarget "MyMetabolism" */;
 			buildPhases = (
+				A49A27C92264C76530933EF0 /* [CP] Check Pods Manifest.lock */,
 				0EB8353126A204E50006EC99 /* Sources */,
 				0EB8353226A204E50006EC99 /* Frameworks */,
 				0EB8353326A204E50006EC99 /* Resources */,
+				261ED6FAF63DCE771612842D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,12 +186,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB8354526A204E70006EC99 /* LaunchScreen.storyboard in Resources */,
+				0EB8355826A218E00006EC99 /* GoogleService-Info.plist in Resources */,
 				0EB8354226A204E70006EC99 /* Assets.xcassets in Resources */,
 				0EB8354026A204E50006EC99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		261ED6FAF63DCE771612842D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMetabolism/Pods-MyMetabolism-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyMetabolism/Pods-MyMetabolism-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyMetabolism/Pods-MyMetabolism-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A49A27C92264C76530933EF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyMetabolism-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0EB8353126A204E50006EC99 /* Sources */ = {
@@ -173,6 +248,7 @@
 				0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */,
 				0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */,
 				0EB8355126A205620006EC99 /* HomeViewController.swift in Sources */,
+				0EB8355A26A23BAB0006EC99 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +390,7 @@
 		};
 		0EB8354A26A204E70006EC99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69F3F50263AB51BD5B90D6E /* Pods-MyMetabolism.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +409,7 @@
 		};
 		0EB8354B26A204E70006EC99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD7EF0AF6D4EF3243B9B5E28 /* Pods-MyMetabolism.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

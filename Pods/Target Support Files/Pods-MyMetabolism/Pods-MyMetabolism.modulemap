@@ -1,0 +1,6 @@
+framework module Pods_MyMetabolism {
+  umbrella header "Pods-MyMetabolism-umbrella.h"
+
+  export *
+  module * { export * }
+}

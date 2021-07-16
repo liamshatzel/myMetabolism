@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="f8L-3r-19S"/>
+                    <navigationItem key="navigationItem" title="Title" id="ijY-GX-J2q"/>
                     <connections>
                         <outlet property="loginButton" destination="23F-u9-lbr" id="8gv-uS-jQG"/>
                         <outlet property="signUpButton" destination="XNH-1G-vfJ" id="Wtx-W3-EeF"/>
@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bYq-vs-8e6">
-                                <rect key="frame" x="40" y="84" width="334" height="340.5"/>
+                                <rect key="frame" x="40" y="124" width="334" height="340.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2c-U3-GuD">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="42.5"/>
@@ -95,9 +95,13 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="SpR-8c-fAY"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="buW-2l-7F6" eventType="touchUpInside" id="omP-ll-vYA"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-sO-ZQY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-sO-ZQY">
                                         <rect key="frame" x="0.0" y="320" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,13 +119,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="pBD-Hk-1QK" firstAttribute="trailing" secondItem="bYq-vs-8e6" secondAttribute="trailing" constant="40" id="ahC-vF-kah"/>
-                            <constraint firstItem="bYq-vs-8e6" firstAttribute="top" secondItem="pBD-Hk-1QK" secondAttribute="top" constant="40" id="eeM-Rd-B4i"/>
-                            <constraint firstItem="bYq-vs-8e6" firstAttribute="top" secondItem="pBD-Hk-1QK" secondAttribute="top" constant="40" id="f9z-ej-I9B"/>
+                            <constraint firstItem="bYq-vs-8e6" firstAttribute="top" secondItem="pBD-Hk-1QK" secondAttribute="top" constant="80" id="eeM-Rd-B4i"/>
                             <constraint firstItem="bYq-vs-8e6" firstAttribute="leading" secondItem="pBD-Hk-1QK" secondAttribute="leading" constant="40" id="zXw-Qq-gwj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pBD-Hk-1QK"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VLB-Wh-Eta"/>
                     <connections>
                         <outlet property="emailTextField" destination="kYR-93-O9K" id="lb9-CL-2HZ"/>
                         <outlet property="errorLabel" destination="EvP-sO-ZQY" id="hFB-EY-KCC"/>
@@ -133,12 +135,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Enc-W3-BMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="-146"/>
+            <point key="canvasLocation" x="1776.8115942028987" y="-146.65178571428569"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="bZd-lq-pAv">
             <objects>
-                <viewController id="6U9-8T-T9v" customClass="HomeViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="6U9-8T-T9v" customClass="HomeViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7t-oW-rD7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +195,7 @@
                                             <action selector="loginTapped:" destination="Cnz-KI-gq8" eventType="touchUpInside" id="pEw-fv-Gw8"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7m-X2-QUj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7m-X2-QUj">
                                         <rect key="frame" x="0.0" y="210" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
