@@ -16,6 +16,7 @@
 		0EB8354D26A205380006EC99 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8354C26A205380006EC99 /* SignUpViewController.swift */; };
 		0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8354E26A205440006EC99 /* LoginViewController.swift */; };
 		0EB8355126A205620006EC99 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8355026A205620006EC99 /* HomeViewController.swift */; };
+		0EB8355626A214FD0006EC99 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8355526A214FD0006EC99 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0EB8354C26A205380006EC99 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0EB8354E26A205440006EC99 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0EB8355026A205620006EC99 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0EB8355526A214FD0006EC99 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +64,14 @@
 		0EB8353726A204E50006EC99 /* MyMetabolism */ = {
 			isa = PBXGroup;
 			children = (
-				0EB8355226A205660006EC99 /* View Controllers */,
 				0EB8353826A204E50006EC99 /* AppDelegate.swift */,
 				0EB8353A26A204E50006EC99 /* SceneDelegate.swift */,
 				0EB8353E26A204E50006EC99 /* Main.storyboard */,
 				0EB8354126A204E70006EC99 /* Assets.xcassets */,
 				0EB8354326A204E70006EC99 /* LaunchScreen.storyboard */,
 				0EB8354626A204E70006EC99 /* Info.plist */,
+				0EB8355426A214C50006EC99 /* Helpers */,
+				0EB8355226A205660006EC99 /* View Controllers */,
 			);
 			path = MyMetabolism;
 			sourceTree = "<group>";
@@ -82,6 +85,14 @@
 				0EB8353C26A204E50006EC99 /* ViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0EB8355426A214C50006EC99 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0EB8355526A214FD0006EC99 /* Utilities.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			files = (
 				0EB8353D26A204E50006EC99 /* ViewController.swift in Sources */,
 				0EB8353926A204E50006EC99 /* AppDelegate.swift in Sources */,
+				0EB8355626A214FD0006EC99 /* Utilities.swift in Sources */,
 				0EB8354D26A205380006EC99 /* SignUpViewController.swift in Sources */,
 				0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */,
 				0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */,

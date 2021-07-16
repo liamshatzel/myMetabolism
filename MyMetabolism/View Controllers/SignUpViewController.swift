@@ -18,12 +18,30 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
            super.viewDidLoad()
-
            // Do any additional setup after loading the view.
+        setUpElements()
        }
+    func setUpElements(){
+        //Hide Error Label
+        errorLabel.alpha = 0
+        
+        //Style elements
+        Utilities.styleTextField(firstNameTextField)
+        
+        Utilities.styleTextField(lastNameTextField)
+        
+        Utilities.styleTextField(emailTextField)
+        
+        Utilities.styleTextField(passwordTextField)
+        
+        Utilities.styleFilledButton(signUpButton)
+    }
     /*
     // MARK: - Navigation
 
