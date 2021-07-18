@@ -26,10 +26,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-           // Do any additional setup after loading the view.
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        view.layer.backgroundColor = UIColor(red: 0.965, green: 0.961, blue: 0.961, alpha: 1).cgColor
         setUpElements()
+        
        }
+    
     func setUpElements(){
         //Hide Error Label
         errorLabel.alpha = 0

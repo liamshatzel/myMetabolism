@@ -36,8 +36,12 @@ class Utilities {
         button.backgroundColor = UIColor(red: 0.043, green: 0.808, blue: 0.514, alpha: 1)
         //button.layer.cornerRadius = 25.0
         button.layer.cornerRadius = 14
-        //button.tintColor = UIColor.white
+        button.tintColor = UIColor.white
         button.frame = CGRect(x: 0, y: 0, width: 327, height: 54)
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 3, height: 3)
+        button.layer.shadowOpacity = 0.7
+        button.layer.shadowRadius = 4.0
         
         
     }
@@ -45,10 +49,18 @@ class Utilities {
     static func styleHollowButton(_ button:UIButton) {
         
         // Hollow rounded corner style
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.cornerRadius = 25.0
-        button.tintColor = UIColor.black
+        button.frame = CGRect(x: 0, y: 0, width: 327, height: 54)
+        //button.layer.borderWidth = 2
+        
+        button.tintColor = UIColor(red: 0.043, green: 0.808, blue: 0.514, alpha: 1)
+        button.backgroundColor = .white
+        //button.layer.borderColor = UIColor.black.cgColor
+        button.layer.cornerRadius = 14.0
+        //button.tintColor = UIColor.black
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 3, height: 3)
+        button.layer.shadowOpacity = 0.7
+        button.layer.shadowRadius = 4.0
     }
     
     static func isPasswordValid(_ password : String) -> Bool {

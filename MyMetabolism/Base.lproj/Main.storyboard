@@ -7,21 +7,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="u7x-co-nHQ">
-                                <rect key="frame" x="40" y="714.5" width="334" height="107.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="u7x-co-nHQ">
+                                <rect key="frame" x="40" y="544" width="334" height="156"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNH-1G-vfJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="SOp-7w-Cb0"/>
+                                            <constraint firstAttribute="height" constant="60" id="SOp-7w-Cb0"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
@@ -29,28 +29,69 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23F-u9-lbr">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="96" width="334" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="IKf-ZB-0R4"/>
+                                        </constraints>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <segue destination="Cnz-KI-gq8" kind="show" id="5U0-gF-6jE"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="23F-u9-lbr" firstAttribute="height" secondItem="XNH-1G-vfJ" secondAttribute="height" multiplier="0.75" id="FCp-4F-73u"/>
-                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
+                                <rect key="frame" x="98" y="358" width="218" height="61"/>
+                                <string key="text">Track your circadian rythms
+in one click
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
+                                <rect key="frame" x="123" y="305" width="169" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
+                                <rect key="frame" x="124" y="165.5" width="166" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mdi_alarm-check" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-w2-Ldw">
+                                <rect key="frame" x="129" y="20" width="157" height="88"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qLu-gD-jCy" secondAttribute="trailing" constant="98" id="1XX-hL-RPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aas-nd-Cka" secondAttribute="trailing" constant="124" id="2Ut-il-h1P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u7x-co-nHQ" secondAttribute="bottom" constant="40" id="4ta-iX-GO3"/>
+                            <constraint firstItem="Aas-nd-Cka" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="7lj-Lr-beJ"/>
+                            <constraint firstItem="ibN-en-A5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="EX8-76-k3T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ibN-en-A5R" secondAttribute="trailing" constant="122" id="LDa-HA-Vnq"/>
+                            <constraint firstItem="b9h-w2-Ldw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="SSU-pk-gQX"/>
+                            <constraint firstItem="b9h-w2-Ldw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UMV-mC-iYA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b9h-w2-Ldw" secondAttribute="trailing" constant="128" id="faV-Rr-MEH"/>
+                            <constraint firstItem="ibN-en-A5R" firstAttribute="top" secondItem="Aas-nd-Cka" secondAttribute="bottom" constant="120" id="gGo-f2-DkL"/>
+                            <constraint firstItem="u7x-co-nHQ" firstAttribute="top" secondItem="qLu-gD-jCy" secondAttribute="bottom" constant="125" id="jAc-1F-k1w"/>
+                            <constraint firstItem="qLu-gD-jCy" firstAttribute="top" secondItem="ibN-en-A5R" secondAttribute="bottom" constant="32.5" id="oR6-Me-2mL"/>
+                            <constraint firstItem="qLu-gD-jCy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="rYW-GA-sWX"/>
                             <constraint firstItem="u7x-co-nHQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="v2q-vx-uIE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u7x-co-nHQ" secondAttribute="trailing" constant="40" id="xpw-Pj-ANQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="ijY-GX-J2q"/>
+                    <navigationItem key="navigationItem" prompt="  " id="ijY-GX-J2q">
+                        <barButtonItem key="backBarButtonItem" title="  " id="ERi-hl-PY9"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="desc1" destination="ibN-en-A5R" id="kMK-aX-Ap5"/>
+                        <outlet property="desc2" destination="qLu-gD-jCy" id="6ms-nT-BNz"/>
+                        <outlet property="introText" destination="Aas-nd-Cka" id="s8h-Tb-SuK"/>
                         <outlet property="loginButton" destination="23F-u9-lbr" id="8gv-uS-jQG"/>
                         <outlet property="signUpButton" destination="XNH-1G-vfJ" id="Wtx-W3-EeF"/>
                     </connections>
@@ -64,11 +105,11 @@
             <objects>
                 <viewController id="buW-2l-7F6" customClass="SignUpViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7bU-Ry-pwr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bYq-vs-8e6">
-                                <rect key="frame" x="40" y="124" width="334" height="340.5"/>
+                                <rect key="frame" x="40" y="80" width="334" height="340.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2c-U3-GuD">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="42.5"/>
@@ -169,11 +210,11 @@
             <objects>
                 <viewController id="Cnz-KI-gq8" customClass="LoginViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WqC-hb-q8M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BhE-5O-zzO">
-                                <rect key="frame" x="40" y="84" width="334" height="230.5"/>
+                                <rect key="frame" x="40" y="40" width="334" height="230.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0KV-hW-A22">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -217,7 +258,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qdK-ap-SJn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="y9Y-9I-lVW"/>
+                    <navigationItem key="navigationItem" id="y9Y-9I-lVW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rec-3Y-zdG"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="0KV-hW-A22" id="ML8-jF-6UU"/>
                         <outlet property="errorLabel" destination="d7m-X2-QUj" id="EqZ-8g-NRW"/>
@@ -232,9 +275,11 @@
         <!--Navigation Controller-->
         <scene sceneID="1od-62-R5R">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="avm-ct-GMh" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="avm-ct-GMh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ox6-T7-oWP">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ox6-T7-oWP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -247,4 +292,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mdi_alarm-check" width="88" height="88"/>
+    </resources>
 </document>

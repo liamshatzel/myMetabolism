@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E35EA2C26A3B1D000ECFE0F /* mdi_alarm-check.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0E35EA2B26A3B1D000ECFE0F /* mdi_alarm-check.svg */; };
 		0EB8353926A204E50006EC99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353826A204E50006EC99 /* AppDelegate.swift */; };
 		0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353A26A204E50006EC99 /* SceneDelegate.swift */; };
 		0EB8353D26A204E50006EC99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353C26A204E50006EC99 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E35EA2B26A3B1D000ECFE0F /* mdi_alarm-check.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mdi_alarm-check.svg"; sourceTree = "<group>"; };
 		0EB8353526A204E50006EC99 /* MyMetabolism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMetabolism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB8353826A204E50006EC99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB8353A26A204E50006EC99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E35EA2A26A3A64A00ECFE0F /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				0E35EA2B26A3B1D000ECFE0F /* mdi_alarm-check.svg */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		0EB8352C26A204E50006EC99 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 				0EB8354326A204E70006EC99 /* LaunchScreen.storyboard */,
 				0EB8354626A204E70006EC99 /* Info.plist */,
 				0EB8355726A218E00006EC99 /* GoogleService-Info.plist */,
+				0E35EA2A26A3A64A00ECFE0F /* Media */,
 				0EB8355426A214C50006EC99 /* Helpers */,
 				0EB8355226A205660006EC99 /* View Controllers */,
 			);
@@ -189,6 +200,7 @@
 				0EB8355826A218E00006EC99 /* GoogleService-Info.plist in Resources */,
 				0EB8354226A204E70006EC99 /* Assets.xcassets in Resources */,
 				0EB8354026A204E50006EC99 /* Main.storyboard in Resources */,
+				0E35EA2C26A3B1D000ECFE0F /* mdi_alarm-check.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
