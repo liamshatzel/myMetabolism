@@ -6,6 +6,13 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro.ttf">
+            <string>SFPro-Black</string>
+            <string>SFPro-Bold</string>
+            <string>SFPro-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -40,45 +47,45 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
+                            <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
                                 <rect key="frame" x="98" y="358" width="218" height="61"/>
                                 <string key="text">Track your circadian rythms
 in one click
 </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SFPro-Thin" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
-                                <rect key="frame" x="123" y="305" width="169" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
-                                <rect key="frame" x="124" y="165.5" width="166" height="19.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
+                                <rect key="frame" x="115" y="318.5" width="184" height="20.5"/>
+                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mdi_alarm-check" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-w2-Ldw">
-                                <rect key="frame" x="129" y="20" width="157" height="88"/>
+                                <rect key="frame" x="96" y="33" width="222" height="88"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
+                                <rect key="frame" x="98" y="151" width="219" height="24"/>
+                                <fontDescription key="fontDescription" name="SFPro-Black" family="SF Pro" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qLu-gD-jCy" secondAttribute="trailing" constant="98" id="1XX-hL-RPd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aas-nd-Cka" secondAttribute="trailing" constant="124" id="2Ut-il-h1P"/>
+                            <constraint firstItem="Aas-nd-Cka" firstAttribute="top" secondItem="b9h-w2-Ldw" secondAttribute="bottom" constant="30" id="25e-kS-zR1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u7x-co-nHQ" secondAttribute="bottom" constant="40" id="4ta-iX-GO3"/>
-                            <constraint firstItem="Aas-nd-Cka" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="7lj-Lr-beJ"/>
-                            <constraint firstItem="ibN-en-A5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="EX8-76-k3T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ibN-en-A5R" secondAttribute="trailing" constant="122" id="LDa-HA-Vnq"/>
-                            <constraint firstItem="b9h-w2-Ldw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="SSU-pk-gQX"/>
-                            <constraint firstItem="b9h-w2-Ldw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UMV-mC-iYA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b9h-w2-Ldw" secondAttribute="trailing" constant="128" id="faV-Rr-MEH"/>
-                            <constraint firstItem="ibN-en-A5R" firstAttribute="top" secondItem="Aas-nd-Cka" secondAttribute="bottom" constant="120" id="gGo-f2-DkL"/>
+                            <constraint firstItem="ibN-en-A5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="8Pv-Zp-xlP"/>
+                            <constraint firstItem="qLu-gD-jCy" firstAttribute="top" secondItem="ibN-en-A5R" secondAttribute="bottom" constant="19" id="F6S-lJ-aLL"/>
+                            <constraint firstItem="Aas-nd-Cka" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="PP6-29-tHX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b9h-w2-Ldw" secondAttribute="trailing" constant="96" id="T62-Uc-QCj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aas-nd-Cka" secondAttribute="trailing" constant="97" id="Wrk-xf-y8Z"/>
+                            <constraint firstItem="b9h-w2-Ldw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="X1j-9m-Jqe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ibN-en-A5R" secondAttribute="trailing" constant="115" id="faG-kl-VGk"/>
+                            <constraint firstItem="b9h-w2-Ldw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="hJr-0h-OKE"/>
                             <constraint firstItem="u7x-co-nHQ" firstAttribute="top" secondItem="qLu-gD-jCy" secondAttribute="bottom" constant="125" id="jAc-1F-k1w"/>
-                            <constraint firstItem="qLu-gD-jCy" firstAttribute="top" secondItem="ibN-en-A5R" secondAttribute="bottom" constant="32.5" id="oR6-Me-2mL"/>
                             <constraint firstItem="qLu-gD-jCy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="rYW-GA-sWX"/>
                             <constraint firstItem="u7x-co-nHQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="v2q-vx-uIE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u7x-co-nHQ" secondAttribute="trailing" constant="40" id="xpw-Pj-ANQ"/>

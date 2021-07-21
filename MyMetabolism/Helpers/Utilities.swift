@@ -1,10 +1,9 @@
 //
 //  Utilities.swift
-//  customauth
+//  MyMetabolism
 //
-//  Created by Christopher Ching on 2019-05-09.
-//  Copyright © 2019 Christopher Ching. All rights reserved.
-//
+//  Created by Liam Shatzel on 7/16/21.
+//  Copyright © 2021 Liam Shatzel. All rights reserved.
 
 import Foundation
 import UIKit
@@ -18,7 +17,7 @@ class Utilities {
         
         bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width, height: 2)
         
-        bottomLine.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1).cgColor
+        bottomLine.backgroundColor = UIColor.init(red: 0.043, green: 0.808, blue: 0.514, alpha: 1).cgColor
         
         // Remove border on text field
         textfield.borderStyle = .none
@@ -42,6 +41,8 @@ class Utilities {
         button.layer.shadowOffset = CGSize(width: 3, height: 3)
         button.layer.shadowOpacity = 0.7
         button.layer.shadowRadius = 4.0
+        button.titleLabel?.font = UIFont(name: "SFPro-Bold", size: 16)
+
         
         
     }
@@ -61,6 +62,7 @@ class Utilities {
         button.layer.shadowOffset = CGSize(width: 3, height: 3)
         button.layer.shadowOpacity = 0.7
         button.layer.shadowRadius = 4.0
+        button.titleLabel?.font = UIFont(name: "SFPro-Bold", size: 16)
     }
     
     static func isPasswordValid(_ password : String) -> Bool {
