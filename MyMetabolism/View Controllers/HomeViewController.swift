@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
 
@@ -15,6 +16,19 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         view.layer.backgroundColor = UIColor(red: 0.965, green: 0.961, blue: 0.961, alpha: 1).cgColor
+    }
+    
+    @IBAction func logOutButton_Tapped(_ sender: Any) {
+        let auth = Auth.auth()
+        do {
+            try auth.signOut()
+            let loginViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginViewController) as? LoginViewController
+            self.view.window?.rootViewController = loginViewController
+            self.view.window?.makeKeyAndVisible()
+        } catch let signOutError {
+            print("Error")
+        }
+        
     }
     
 

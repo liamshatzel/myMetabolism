@@ -199,23 +199,35 @@ in one click
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jp1-9T-5EJ">
+                                <rect key="frame" x="177" y="577" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="logOutButton_Tapped:" destination="6U9-8T-T9v" eventType="touchUpInside" id="lJL-lF-xac"/>
+                                    <action selector="logoutButton_Tapped:" destination="P6K-zD-tUA" eventType="touchUpInside" id="yOx-Tu-NQr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerY" secondItem="g7t-oW-rD7" secondAttribute="centerY" id="4He-3g-wii"/>
+                            <constraint firstItem="jp1-9T-5EJ" firstAttribute="top" secondItem="mUu-ex-51A" secondAttribute="bottom" constant="118.5" id="KcG-gi-xhe"/>
+                            <constraint firstItem="NWv-ET-Sl2" firstAttribute="trailing" secondItem="jp1-9T-5EJ" secondAttribute="trailing" constant="177" id="OhS-Ic-I7A"/>
+                            <constraint firstItem="jp1-9T-5EJ" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" constant="177" id="jh8-UH-ucz"/>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerX" secondItem="g7t-oW-rD7" secondAttribute="centerX" id="vFH-Om-edc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NWv-ET-Sl2"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehW-31-q8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="P6K-zD-tUA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2573.913043478261" y="178.79464285714286"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rNh-SP-GHS">
             <objects>
-                <viewController id="Cnz-KI-gq8" customClass="LoginViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" id="Cnz-KI-gq8" customClass="LoginViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WqC-hb-q8M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
