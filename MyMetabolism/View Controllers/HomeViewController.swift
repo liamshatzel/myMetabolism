@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
@@ -22,11 +23,13 @@ class HomeViewController: UIViewController {
         let auth = Auth.auth()
         do {
             try auth.signOut()
-            let loginViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginViewController) as? LoginViewController
+            let defaults = UserDefaults.standard
+            defaults.set(false, forKey: "isUserSignedIn")
+            let loginViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginViewController) as! LoginViewController
             self.view.window?.rootViewController = loginViewController
             self.view.window?.makeKeyAndVisible()
-        } catch let signOutError {
-            print("Error")
+        } catch let err {
+            print(err)
         }
         
     }
