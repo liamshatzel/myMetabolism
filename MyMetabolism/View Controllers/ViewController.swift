@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
+
 
 class ViewController: UIViewController {
 
@@ -19,6 +22,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var desc2: UILabel!
     
     @IBOutlet weak var introText: UILabel!
+    
+
+    var handle: AuthStateDidChangeListenerHandle?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        handle = Auth.auth().addStateDidChangeListener { auth, user in
+            // [START_EXCLUDE]
+            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+            self.view.window?.rootViewController = homeViewController
+            self.view.window?.makeKeyAndVisible()
+            // [END_EXCLUDE]
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +64,7 @@ class ViewController: UIViewController {
                let names = UIFont.fontNames(forFamilyName: family)
                print("Family: \(family) Font names: \(names)")
         }*/
+
     }
     func setupElements(){
         //Style Buttons
@@ -54,6 +72,18 @@ class ViewController: UIViewController {
         Utilities.styleHollowButton(loginButton)
         
         }
+    
+    
+  /*  private func validateAuth() {
+        if Auth.auth().currentUser != nil{
+           HomeViewController()
+        } else{
+            let vc = LoginViewController()
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: false)
+        }
+    } */
 
 
 }

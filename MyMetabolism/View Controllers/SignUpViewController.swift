@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -103,7 +104,7 @@ class SignUpViewController: UIViewController {
                     }
                     
                     //transition to home screen
-                    self.transitionToHome()
+                    //self.transitionToHome()
                 }
             }
             
@@ -113,6 +114,7 @@ class SignUpViewController: UIViewController {
         //Sign up user
         
         //Transition to home screen
+        transitionToHome()
         
     }
     func showError(_ message: String){
@@ -125,6 +127,7 @@ class SignUpViewController: UIViewController {
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
+
 
 
 }
