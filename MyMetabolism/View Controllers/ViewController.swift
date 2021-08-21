@@ -30,9 +30,17 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         handle = Auth.auth().addStateDidChangeListener { auth, user in
             // [START_EXCLUDE]
+            if Auth.auth().currentUser != nil {
             let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
             self.view.window?.rootViewController = homeViewController
             self.view.window?.makeKeyAndVisible()
+            } else {
+                print ("not signed in")
+                
+                /*let signUpViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.signUpViewController) as? SignUpViewController
+                self.view.window?.rootViewController = signUpViewController
+                self.view.window?.makeKeyAndVisible()*/
+            }
             // [END_EXCLUDE]
         }
     }

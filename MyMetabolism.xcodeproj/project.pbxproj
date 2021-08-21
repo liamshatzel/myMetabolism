@@ -28,11 +28,11 @@
 		0E0EA9A026A4E2560078D576 /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0E0EA97126A4E2550078D576 /* SF-Pro-Text-BlackItalic.otf */; };
 		0E0EA9A226A4E2560078D576 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0E0EA97326A4E2550078D576 /* SF-Pro-Text-Regular.otf */; };
 		0E35EA2C26A3B1D000ECFE0F /* mdi_alarm-check.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0E35EA2B26A3B1D000ECFE0F /* mdi_alarm-check.svg */; };
+		0E6EABEE26D1AC9F00A01049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8354126A204E70006EC99 /* Assets.xcassets */; };
 		0EB8353926A204E50006EC99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353826A204E50006EC99 /* AppDelegate.swift */; };
 		0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353A26A204E50006EC99 /* SceneDelegate.swift */; };
 		0EB8353D26A204E50006EC99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353C26A204E50006EC99 /* ViewController.swift */; };
 		0EB8354026A204E50006EC99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8353E26A204E50006EC99 /* Main.storyboard */; };
-		0EB8354226A204E70006EC99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8354126A204E70006EC99 /* Assets.xcassets */; };
 		0EB8354526A204E70006EC99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8354326A204E70006EC99 /* LaunchScreen.storyboard */; };
 		0EB8354D26A205380006EC99 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8354C26A205380006EC99 /* SignUpViewController.swift */; };
 		0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8354E26A205440006EC99 /* LoginViewController.swift */; };
@@ -273,7 +273,6 @@
 				0E0EA99926A4E2560078D576 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				0E0EA9A226A4E2560078D576 /* SF-Pro-Text-Regular.otf in Resources */,
 				0EB8355826A218E00006EC99 /* GoogleService-Info.plist in Resources */,
-				0EB8354226A204E70006EC99 /* Assets.xcassets in Resources */,
 				0E0EA98426A4E2560078D576 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				0E0EA99E26A4E2560078D576 /* SF-Pro.ttf in Resources */,
 				0E0EA99D26A4E2560078D576 /* SF-Pro-Text-Heavy.otf in Resources */,
@@ -289,6 +288,7 @@
 				0E0EA97E26A4E2560078D576 /* SF-Pro-Text-Light.otf in Resources */,
 				0E0EA98B26A4E2560078D576 /* SF-Pro-Text-ThinItalic.otf in Resources */,
 				0E0EA97A26A4E2560078D576 /* SF-Pro-Text-Black.otf in Resources */,
+				0E6EABEE26D1AC9F00A01049 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

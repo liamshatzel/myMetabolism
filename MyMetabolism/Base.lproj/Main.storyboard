@@ -17,7 +17,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUpVC" id="BYZ-38-t0r" customClass="ViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                 </subviews>
                             </stackView>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
-                                <rect key="frame" x="98" y="358" width="218" height="61"/>
+                                <rect key="frame" x="98" y="359.5" width="218" height="59.5"/>
                                 <string key="text">Track your circadian rythms
 in one click
 </string>
@@ -57,7 +57,7 @@ in one click
                                 <nil key="highlightedColor"/>
                             </label>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
-                                <rect key="frame" x="115" y="318.5" width="184" height="20.5"/>
+                                <rect key="frame" x="115" y="320.5" width="184" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@ in one click
                                 <rect key="frame" x="96" y="33" width="222" height="88"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
-                                <rect key="frame" x="98" y="151" width="219" height="24"/>
+                                <rect key="frame" x="98" y="151" width="219" height="23.5"/>
                                 <fontDescription key="fontDescription" name="SFPro-Black" family="SF Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -199,25 +199,50 @@ in one click
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jp1-9T-5EJ">
-                                <rect key="frame" x="177" y="577" width="60" height="30"/>
-                                <state key="normal" title="Sign Out"/>
-                                <connections>
-                                    <action selector="logOutButton_Tapped:" destination="6U9-8T-T9v" eventType="touchUpInside" id="lJL-lF-xac"/>
-                                    <action selector="logoutButton_Tapped:" destination="P6K-zD-tUA" eventType="touchUpInside" id="yOx-Tu-NQr"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igA-Yn-mrP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title=" " id="gdf-QD-3eX">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="zfl-UH-VyW">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jp1-9T-5EJ">
+                                                <rect key="frame" x="334" y="7" width="60" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Sign Out"/>
+                                                <connections>
+                                                    <action selector="logOutButton_Tapped:" destination="6U9-8T-T9v" eventType="touchUpInside" id="lJL-lF-xac"/>
+                                                    <action selector="logoutButton_Tapped:" destination="P6K-zD-tUA" eventType="touchUpInside" id="yOx-Tu-NQr"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faI-Bm-qQn">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="flexibleSpace" id="Xon-cz-K8m"/>
+                                    <barButtonItem title="Home" image="Vectorhome2" id="hbQ-q0-KQN"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XE3-QP-4wW"/>
+                                    <barButtonItem title="Stats" image="Vectorsda" id="Cjh-GQ-oIW"/>
+                                    <barButtonItem systemItem="flexibleSpace" id="VUl-ab-NRD"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerY" secondItem="g7t-oW-rD7" secondAttribute="centerY" id="4He-3g-wii"/>
-                            <constraint firstItem="jp1-9T-5EJ" firstAttribute="top" secondItem="mUu-ex-51A" secondAttribute="bottom" constant="118.5" id="KcG-gi-xhe"/>
-                            <constraint firstItem="NWv-ET-Sl2" firstAttribute="trailing" secondItem="jp1-9T-5EJ" secondAttribute="trailing" constant="177" id="OhS-Ic-I7A"/>
-                            <constraint firstItem="jp1-9T-5EJ" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" constant="177" id="jh8-UH-ucz"/>
+                            <constraint firstItem="igA-Yn-mrP" firstAttribute="top" secondItem="NWv-ET-Sl2" secondAttribute="top" id="NYK-Zg-SZJ"/>
+                            <constraint firstItem="faI-Bm-qQn" firstAttribute="trailing" secondItem="NWv-ET-Sl2" secondAttribute="trailing" id="UyU-qY-6tG"/>
+                            <constraint firstItem="faI-Bm-qQn" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" id="Xgl-yX-OZG"/>
+                            <constraint firstItem="faI-Bm-qQn" firstAttribute="bottom" secondItem="NWv-ET-Sl2" secondAttribute="bottom" id="ZE7-pb-FqY"/>
+                            <constraint firstItem="igA-Yn-mrP" firstAttribute="trailing" secondItem="NWv-ET-Sl2" secondAttribute="trailing" id="bQX-cC-GTB"/>
+                            <constraint firstItem="igA-Yn-mrP" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" id="mVT-4M-sBX"/>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerX" secondItem="g7t-oW-rD7" secondAttribute="centerX" id="vFH-Om-edc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NWv-ET-Sl2"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehW-31-q8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="P6K-zD-tUA" userLabel="Exit" sceneMemberID="exit"/>
@@ -277,9 +302,6 @@ in one click
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qdK-ap-SJn"/>
                     </view>
-                    <navigationItem key="navigationItem" id="y9Y-9I-lVW">
-                        <barButtonItem key="backBarButtonItem" title=" " id="rec-3Y-zdG"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="0KV-hW-A22" id="ML8-jF-6UU"/>
                         <outlet property="errorLabel" destination="d7m-X2-QUj" id="EqZ-8g-NRW"/>
@@ -312,6 +334,8 @@ in one click
         </scene>
     </scenes>
     <resources>
+        <image name="Vectorhome2" width="88" height="88"/>
+        <image name="Vectorsda" width="45" height="25"/>
         <image name="mdi_alarm-check" width="88" height="88"/>
     </resources>
 </document>
