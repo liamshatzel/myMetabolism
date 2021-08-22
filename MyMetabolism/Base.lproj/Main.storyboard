@@ -48,7 +48,7 @@
                                 </subviews>
                             </stackView>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
-                                <rect key="frame" x="98" y="359.5" width="218" height="59.5"/>
+                                <rect key="frame" x="98" y="358" width="218" height="61"/>
                                 <string key="text">Track your circadian rythms
 in one click
 </string>
@@ -57,7 +57,7 @@ in one click
                                 <nil key="highlightedColor"/>
                             </label>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
-                                <rect key="frame" x="115" y="320.5" width="184" height="20"/>
+                                <rect key="frame" x="115" y="318.5" width="184" height="20.5"/>
                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@ in one click
                                 <rect key="frame" x="96" y="33" width="222" height="88"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
-                                <rect key="frame" x="98" y="151" width="219" height="23.5"/>
+                                <rect key="frame" x="98" y="151" width="219" height="24"/>
                                 <fontDescription key="fontDescription" name="SFPro-Black" family="SF Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -185,10 +185,67 @@ in one click
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="-146.65178571428569"/>
         </scene>
+        <!--Home Navigation Controller-->
+        <scene sceneID="lVA-Ue-5Xk">
+            <objects>
+                <navigationController storyboardIdentifier="homeC" id="Kqb-O9-Q4D" customClass="HomeNavigationController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="PDb-ga-BEj">
+                        <color key="badgeColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Oh-HX-cwM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6U9-8T-T9v" kind="relationship" relationship="rootViewController" id="sNb-Tx-oc6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isE-ao-b3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3465" y="-106"/>
+        </scene>
+        <!--Profile Navigation Controller-->
+        <scene sceneID="Z9G-yM-4HH">
+            <objects>
+                <navigationController id="FX0-Vi-0jc" customClass="ProfileNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="1j8-sf-4Ab">
+                        <color key="badgeColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Lp-TT-eWD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="P44-si-p13" kind="relationship" relationship="rootViewController" id="euN-PH-t5N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiZ-tA-HIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5013" y="-106"/>
+        </scene>
+        <!--Stats Navigation Controller-->
+        <scene sceneID="9az-Ti-ltW">
+            <objects>
+                <navigationController storyboardIdentifier="statsC" id="GSX-z4-n1b" customClass="StatsNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="chart.pie.fill" catalog="system" id="s0X-s7-wgJ">
+                        <color key="badgeColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zfL-gn-yXu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ja8-DQ-4Rk" kind="relationship" relationship="rootViewController" id="dXe-sP-XeE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0po-e6-UG3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4236" y="-106"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="bZd-lq-pAv">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="6U9-8T-T9v" customClass="HomeViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="6U9-8T-T9v" userLabel="Home View Controller" customClass="HomeViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7t-oW-rD7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +257,7 @@ in one click
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igA-Yn-mrP">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
                                 <items>
                                     <navigationItem title=" " id="gdf-QD-3eX">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="zfl-UH-VyW">
@@ -217,24 +274,11 @@ in one click
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faI-Bm-qQn">
-                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem systemItem="flexibleSpace" id="Xon-cz-K8m"/>
-                                    <barButtonItem title="Home" image="Vectorhome2" id="hbQ-q0-KQN"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="XE3-QP-4wW"/>
-                                    <barButtonItem title="Stats" image="Vectorsda" id="Cjh-GQ-oIW"/>
-                                    <barButtonItem systemItem="flexibleSpace" id="VUl-ab-NRD"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerY" secondItem="g7t-oW-rD7" secondAttribute="centerY" id="4He-3g-wii"/>
                             <constraint firstItem="igA-Yn-mrP" firstAttribute="top" secondItem="NWv-ET-Sl2" secondAttribute="top" id="NYK-Zg-SZJ"/>
-                            <constraint firstItem="faI-Bm-qQn" firstAttribute="trailing" secondItem="NWv-ET-Sl2" secondAttribute="trailing" id="UyU-qY-6tG"/>
-                            <constraint firstItem="faI-Bm-qQn" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" id="Xgl-yX-OZG"/>
-                            <constraint firstItem="faI-Bm-qQn" firstAttribute="bottom" secondItem="NWv-ET-Sl2" secondAttribute="bottom" id="ZE7-pb-FqY"/>
                             <constraint firstItem="igA-Yn-mrP" firstAttribute="trailing" secondItem="NWv-ET-Sl2" secondAttribute="trailing" id="bQX-cC-GTB"/>
                             <constraint firstItem="igA-Yn-mrP" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" id="mVT-4M-sBX"/>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerX" secondItem="g7t-oW-rD7" secondAttribute="centerX" id="vFH-Om-edc"/>
@@ -242,12 +286,45 @@ in one click
                         <viewLayoutGuide key="safeArea" id="NWv-ET-Sl2"/>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Home" id="zAO-ht-Lvn"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehW-31-q8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="P6K-zD-tUA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2573.913043478261" y="178.79464285714286"/>
+            <point key="canvasLocation" x="3464" y="603"/>
+        </scene>
+        <!--Statistics-->
+        <scene sceneID="Aru-6x-L0q">
+            <objects>
+                <viewController storyboardIdentifier="statsVC" id="Ja8-DQ-4Rk" customClass="StatsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GiH-iH-ZZk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dw2-q3-4VB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statistics" id="oSB-xh-by0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJo-QU-zz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4235" y="613"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="NAm-Gw-bun">
+            <objects>
+                <viewController storyboardIdentifier="profileVC" id="P44-si-p13" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZsS-89-e6z" customClass="ProfileViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="gHS-wV-7id"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="fYn-7u-VB0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbS-6r-l08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5012" y="613"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rNh-SP-GHS">
@@ -332,10 +409,30 @@ in one click
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JTe-YS-iF3">
+            <objects>
+                <tabBarController storyboardIdentifier="tabC" id="U0Y-O8-YnB" customClass="TabBarController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h5i-DI-nQ3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Kqb-O9-Q4D" kind="relationship" relationship="viewControllers" id="GW1-AV-wYc"/>
+                        <segue destination="GSX-z4-n1b" kind="relationship" relationship="viewControllers" id="Ms3-3S-GVf"/>
+                        <segue destination="FX0-Vi-0jc" kind="relationship" relationship="viewControllers" id="PZw-LY-G7b"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNT-qj-6Lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4081" y="-850"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Vectorhome2" width="88" height="88"/>
-        <image name="Vectorsda" width="45" height="25"/>
+        <image name="chart.pie.fill" catalog="system" width="128" height="124"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="mdi_alarm-check" width="88" height="88"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>
