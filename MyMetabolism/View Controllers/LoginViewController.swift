@@ -80,8 +80,19 @@ class LoginViewController: UIViewController {
                 self.errorLabel.text  = error!.localizedDescription
                 self.errorLabel.alpha = 1
             } else {
-                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-                self.view.window?.rootViewController = homeViewController
+                let HomeViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController)
+                let HomeViewNC = UINavigationController(rootViewController: HomeViewTab!)
+                
+                let ProfileViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.profileViewController)
+                let ProfileViewNC = UINavigationController(rootViewController: ProfileViewTab!)
+                
+                let StatsViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.statsViewController)
+                let StatsViewNC = UINavigationController(rootViewController: StatsViewTab!)
+                
+                let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.tabBarController)
+                self.tabBarController?.viewControllers = [HomeViewNC, ProfileViewNC, StatsViewNC]
+                
+                self.view.window?.rootViewController = tabBarController
                 self.view.window?.makeKeyAndVisible()
             }
 
