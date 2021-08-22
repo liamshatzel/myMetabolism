@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var introText: UILabel!
     
 
+    
     var handle: AuthStateDidChangeListenerHandle?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,9 +32,24 @@ class ViewController: UIViewController {
         handle = Auth.auth().addStateDidChangeListener { auth, user in
             // [START_EXCLUDE]
             if Auth.auth().currentUser != nil {
-            let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-            self.view.window?.rootViewController = homeViewController
-            self.view.window?.makeKeyAndVisible()
+                let HomeViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController)
+                let HomeViewNC = UINavigationController(rootViewController: HomeViewTab!)
+                
+                let ProfileViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.profileViewController)
+                let ProfileViewNC = UINavigationController(rootViewController: ProfileViewTab!)
+                
+                let StatsViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.statsViewController)
+                let StatsViewNC = UINavigationController(rootViewController: StatsViewTab!)
+                
+                let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.tabBarController)
+                self.tabBarController?.viewControllers = [HomeViewNC, ProfileViewNC, StatsViewNC]
+                
+                self.view.window?.rootViewController = tabBarController
+                self.view.window?.makeKeyAndVisible()
+                
+            //let tabBarController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabBarController) as? TabBarContoller
+            //self.view.window?.rootViewController = tabBarController
+            //self.view.window?.makeKeyAndVisible()
             } else {
                 print ("not signed in")
                 
