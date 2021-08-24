@@ -256,31 +256,29 @@ in one click
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igA-Yn-mrP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title=" " id="gdf-QD-3eX">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="zfl-UH-VyW">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jp1-9T-5EJ">
-                                                <rect key="frame" x="334" y="7" width="60" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Sign Out"/>
-                                                <connections>
-                                                    <action selector="logOutButton_Tapped:" destination="6U9-8T-T9v" eventType="touchUpInside" id="lJL-lF-xac"/>
-                                                    <action selector="logoutButton_Tapped:" destination="P6K-zD-tUA" eventType="touchUpInside" id="yOx-Tu-NQr"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAV-L2-j7g">
+                                <rect key="frame" x="175" y="752" width="64" height="30"/>
+                                <state key="normal" title="Log Time"/>
+                                <connections>
+                                    <segue destination="V8h-9B-rcC" kind="presentation" id="hrC-x7-Cuz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Finished Eating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAm-Se-rFj">
+                                <rect key="frame" x="87" y="691" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NWv-ET-Sl2" firstAttribute="bottom" secondItem="rAV-L2-j7g" secondAttribute="bottom" constant="31" id="24g-MK-kEV"/>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerY" secondItem="g7t-oW-rD7" secondAttribute="centerY" id="4He-3g-wii"/>
-                            <constraint firstItem="igA-Yn-mrP" firstAttribute="top" secondItem="NWv-ET-Sl2" secondAttribute="top" id="NYK-Zg-SZJ"/>
-                            <constraint firstItem="igA-Yn-mrP" firstAttribute="trailing" secondItem="NWv-ET-Sl2" secondAttribute="trailing" id="bQX-cC-GTB"/>
-                            <constraint firstItem="igA-Yn-mrP" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" id="mVT-4M-sBX"/>
+                            <constraint firstItem="NWv-ET-Sl2" firstAttribute="trailing" secondItem="aAm-Se-rFj" secondAttribute="trailing" constant="87" id="7un-Go-VPR"/>
+                            <constraint firstItem="NWv-ET-Sl2" firstAttribute="trailing" secondItem="rAV-L2-j7g" secondAttribute="trailing" constant="175" id="BkB-7J-axZ"/>
+                            <constraint firstItem="rAV-L2-j7g" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" constant="175" id="Ijw-mM-xIn"/>
+                            <constraint firstItem="rAV-L2-j7g" firstAttribute="top" secondItem="aAm-Se-rFj" secondAttribute="bottom" constant="31" id="LQ1-jI-VLH"/>
+                            <constraint firstItem="aAm-Se-rFj" firstAttribute="leading" secondItem="NWv-ET-Sl2" secondAttribute="leading" constant="87" id="XHe-q9-SoR"/>
                             <constraint firstItem="mUu-ex-51A" firstAttribute="centerX" secondItem="g7t-oW-rD7" secondAttribute="centerX" id="vFH-Om-edc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NWv-ET-Sl2"/>
@@ -288,11 +286,13 @@ in one click
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Home" id="zAO-ht-Lvn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="aAm-Se-rFj" id="Gmr-r5-Xy7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehW-31-q8U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="P6K-zD-tUA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3464" y="603"/>
+            <point key="canvasLocation" x="3463.7681159420295" y="602.67857142857144"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="Aru-6x-L0q">
@@ -313,18 +313,124 @@ in one click
         <!--Profile-->
         <scene sceneID="NAm-Gw-bun">
             <objects>
-                <viewController storyboardIdentifier="profileVC" id="P44-si-p13" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" id="P44-si-p13" customClass="ProfileViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZsS-89-e6z" customClass="ProfileViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="gHS-wV-7id"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="fYn-7u-VB0"/>
+                    <navigationItem key="navigationItem" title="Profile" id="fYn-7u-VB0">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="tsx-zI-F9A">
+                            <connections>
+                                <action selector="signOutButton_tapped:" destination="P44-si-p13" id="d0F-iF-fbZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BbS-6r-l08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5012" y="613"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="roy-o5-7Eq">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="1rz-fV-JZF" customClass="PopUpViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FOA-TY-f3S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAE-Kg-ZLk">
+                                <rect key="frame" x="54" y="355" width="307" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Time Finished Eating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MP-zj-r1z">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoD-LF-7VX">
+                                        <rect key="frame" x="132" y="148" width="43" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Log It!"/>
+                                        <connections>
+                                            <action selector="logTime_TouchUpInside:" destination="1rz-fV-JZF" eventType="touchUpInside" id="a2F-TQ-73W"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vzU-bq-09s">
+                                        <rect key="frame" x="0.0" y="50" width="307" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87265220207253891" green="0.87265220207253891" blue="0.87265220207253891" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="KJd-t9-iUQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="vzU-bq-09s" id="jXg-0n-9h3"/>
+                        <outlet property="labelTitle" destination="9MP-zj-r1z" id="36h-yR-L1h"/>
+                        <outlet property="lableTitle" destination="9MP-zj-r1z" id="cxn-zt-GUk"/>
+                        <outlet property="logButton" destination="MoD-LF-7VX" id="dnd-MA-mKu"/>
+                        <outlet property="timePicker" destination="vzU-bq-09s" id="JYc-Th-J3x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZd-UW-5Z2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2236" y="1393"/>
+        </scene>
+        <!--Time Pop Up View Controller-->
+        <scene sceneID="iII-bM-JBt">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="V8h-9B-rcC" customClass="TimePopUpViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GN5-Si-usG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pfO-Hg-aId">
+                                <rect key="frame" x="20" y="285" width="374" height="326"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Finished Eating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0T-sa-dhC">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eCi-5h-Tk9">
+                                        <rect key="frame" x="0.0" y="68" width="374" height="162"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avk-hd-eLO">
+                                        <rect key="frame" x="166" y="261" width="43" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Log It!"/>
+                                        <connections>
+                                            <action selector="logButton_TouchUpInside:" destination="V8h-9B-rcC" eventType="touchUpInside" id="dvh-Fc-I8Q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60708792098445596" green="0.60708792098445596" blue="0.60708792098445596" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="jEB-0B-VW3"/>
+                    </view>
+                    <connections>
+                        <outlet property="logButton" destination="Avk-hd-eLO" id="IhB-4z-v4W"/>
+                        <outlet property="timePicker" destination="eCi-5h-Tk9" id="AqK-Ki-XHq"/>
+                        <outlet property="titleLabel" destination="d0T-sa-dhC" id="3J2-vm-PFM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWc-HV-XHy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3464" y="1322"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="rNh-SP-GHS">

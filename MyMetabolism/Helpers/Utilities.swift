@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+extension Notification.Name{
+    static let logInfo = Notification.Name(rawValue: "logInfo")
+}
+
 class Utilities {
     
     static func styleTextField(_ textfield:UITextField) {
