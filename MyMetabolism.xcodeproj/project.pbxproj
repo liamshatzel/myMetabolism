@@ -32,6 +32,9 @@
 		0E8E9CE926D2DB4700F0A16C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CE826D2DB4700F0A16C /* TabBarController.swift */; };
 		0E8E9CEB26D2DC0700F0A16C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */; };
 		0E8E9CED26D2DEED00F0A16C /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */; };
+		0E8E9CF026D4680100F0A16C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEF26D4680100F0A16C /* ProfileViewController.swift */; };
+		0E8E9CF226D48BE600F0A16C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CF126D48BE600F0A16C /* PopUpViewController.swift */; };
+		0E8E9CF426D56D5B00F0A16C /* TimePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */; };
 		0EB8353926A204E50006EC99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353826A204E50006EC99 /* AppDelegate.swift */; };
 		0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353A26A204E50006EC99 /* SceneDelegate.swift */; };
 		0EB8353D26A204E50006EC99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353C26A204E50006EC99 /* ViewController.swift */; };
@@ -71,6 +74,9 @@
 		0E8E9CE826D2DB4700F0A16C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
+		0E8E9CEF26D4680100F0A16C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0E8E9CF126D48BE600F0A16C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePopUpViewController.swift; sourceTree = "<group>"; };
 		0EB8353526A204E50006EC99 /* MyMetabolism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMetabolism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB8353826A204E50006EC99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB8353A26A204E50006EC99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,16 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		0E8E9CEE26D467AB00F0A16C /* Navigation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E8E9CE826D2DB4700F0A16C /* TabBarController.swift */,
+				0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */,
+				0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */,
+			);
+			path = "Navigation Controllers";
+			sourceTree = "<group>";
+		};
 		0EB8352C26A204E50006EC99 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +183,7 @@
 				0EB8354626A204E70006EC99 /* Info.plist */,
 				0EB8355726A218E00006EC99 /* GoogleService-Info.plist */,
 				0E35EA2A26A3A64A00ECFE0F /* Media */,
+				0E8E9CEE26D467AB00F0A16C /* Navigation Controllers */,
 				0EB8355226A205660006EC99 /* View Controllers */,
 				0E0EA94626A4E1BE0078D576 /* Fonts */,
 			);
@@ -180,9 +197,9 @@
 				0EB8354E26A205440006EC99 /* LoginViewController.swift */,
 				0EB8355026A205620006EC99 /* HomeViewController.swift */,
 				0EB8353C26A204E50006EC99 /* ViewController.swift */,
-				0E8E9CE826D2DB4700F0A16C /* TabBarController.swift */,
-				0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */,
-				0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */,
+				0E8E9CEF26D4680100F0A16C /* ProfileViewController.swift */,
+				0E8E9CF126D48BE600F0A16C /* PopUpViewController.swift */,
+				0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -356,6 +373,9 @@
 				0EB8355626A214FD0006EC99 /* Utilities.swift in Sources */,
 				0E8E9CE926D2DB4700F0A16C /* TabBarController.swift in Sources */,
 				0E8E9CED26D2DEED00F0A16C /* HomeNavigationController.swift in Sources */,
+				0E8E9CF026D4680100F0A16C /* ProfileViewController.swift in Sources */,
+				0E8E9CF226D48BE600F0A16C /* PopUpViewController.swift in Sources */,
+				0E8E9CF426D56D5B00F0A16C /* TimePopUpViewController.swift in Sources */,
 				0EB8354D26A205380006EC99 /* SignUpViewController.swift in Sources */,
 				0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */,
 				0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */,
