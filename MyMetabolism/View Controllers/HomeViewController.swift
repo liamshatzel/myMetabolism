@@ -10,6 +10,12 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+func currentUser() -> String{
+    let user = Auth.auth().currentUser
+    let uid = user!.uid
+    return uid
+}
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
@@ -24,12 +30,33 @@ class HomeViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: .logInfo, object: nil, queue: OperationQueue.main) { (notification) in
             let timePopUpVC = notification.object as! TimePopUpViewController
             self.timeLabel.text = timePopUpVC.formattedTime
+            
+           // let collection = Firestore.firestore().collection("users").document(Auth.auth().currentUser!.uid)
+            let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime")
+            //let timeFinished = Constants.LogTime(
+               //user: Auth.auth().currentUser!.uid,
+               // time: timePopUpVC.formattedTime, firstname: firstname, lastname: lastname, uid: Auth.auth().currentUser!.uid
+           // )
+            let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime)
+            
+           // collection.setData(timeFinished.dictionary, merge: true)
+
+            timeCollection.document("time").setData(changeableTime.dictionary, merge: true)
+            print(currentUser())
+  
+            
+            //timeCollection.addDocument(data: changeableTime.dictionary, merge: true)
+
         }
 
         
     }
     
-   // @objc func handlePopUpClosing(notification: Notification){
+    @IBAction func logTimeButton_TouchUpInside(_ sender: Any) {
+
+    }
+    
+    // @objc func handlePopUpClosing(notification: Notification){
   //  let timePopUpVC = notification.object as! TimePopUpViewController
   //      timeLabel.text = timePopUpVC.formattedTime
     //}
