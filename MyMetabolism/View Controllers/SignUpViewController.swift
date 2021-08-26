@@ -5,7 +5,8 @@
 //  Created by Liam Shatzel on 7/16/21.
 //  Copyright © 2021 Liam Shatzel. All rights reserved.
 //
-
+var firstname = ""
+var lastname = ""
 import UIKit
 import FirebaseAuth
 import Firebase
@@ -83,8 +84,8 @@ class SignUpViewController: UIViewController {
             
         } else {
             //create clean versions of data
-            let firstname = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let lastname = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            firstname = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            lastname = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -97,7 +98,7 @@ class SignUpViewController: UIViewController {
                 }else{
                     //user was created succesfully
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstname" : firstname, "lastname" : lastname, "uid" : result!.user.uid]) { (error) in
+                    db.collection("users").document(currentUser()).setData(["firstname" : firstname, "lastname" : lastname, "uid" : result!.user.uid]) { (error) in
                         if error != nil{
                             self.showError("Error saving user data")
                         }

@@ -19,4 +19,30 @@ struct Constants {
         static let profileViewController = "profileVC"
         static let statsViewController = "statsVC"
     }
+    struct time{
+        var changeableTime: String
+        var dictionary: [String: Any]{
+            return[
+                "time": changeableTime
+            ]
+        }
+    }
+    struct LogTime{
+        var user: String
+        var time: String
+        var firstname: String
+        var lastname: String
+        var uid: String
+        
+        var dictionary: [String: Any] {
+            return [
+                "user": user,
+                "time": time,
+                "firstname": firstname,
+                "lastname": lastname,
+                "uid": uid
+                
+            ]
+        }
+    }
 }

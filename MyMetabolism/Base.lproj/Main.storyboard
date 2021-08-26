@@ -260,6 +260,7 @@ in one click
                                 <rect key="frame" x="175" y="752" width="64" height="30"/>
                                 <state key="normal" title="Log Time"/>
                                 <connections>
+                                    <action selector="logTimeButton_TouchUpInside:" destination="6U9-8T-T9v" eventType="touchUpInside" id="SV8-Gy-Dag"/>
                                     <segue destination="V8h-9B-rcC" kind="presentation" id="hrC-x7-Cuz"/>
                                 </connections>
                             </button>
