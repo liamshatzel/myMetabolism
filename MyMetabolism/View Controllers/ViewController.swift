@@ -35,14 +35,14 @@ class ViewController: UIViewController {
                 let HomeViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController)
                 let HomeViewNC = UINavigationController(rootViewController: HomeViewTab!)
                 
-                let ProfileViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.profileViewController)
-                let ProfileViewNC = UINavigationController(rootViewController: ProfileViewTab!)
+                let AcctViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.acctViewController)
+                let AcctViewNC = UINavigationController(rootViewController: AcctViewTab!)
                 
                 let StatsViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.statsViewController)
                 let StatsViewNC = UINavigationController(rootViewController: StatsViewTab!)
                 
                 let tabBarController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.tabBarController)
-                self.tabBarController?.viewControllers = [HomeViewNC, ProfileViewNC, StatsViewNC]
+                self.tabBarController?.viewControllers = [HomeViewNC, StatsViewNC, AcctViewNC]
                 
                 self.view.window?.rootViewController = tabBarController
                 self.view.window?.makeKeyAndVisible()

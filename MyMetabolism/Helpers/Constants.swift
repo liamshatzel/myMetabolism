@@ -18,6 +18,7 @@ struct Constants {
         static let homeNavigationController = "homeC"
         static let profileViewController = "profileVC"
         static let statsViewController = "statsVC"
+        static let acctViewController  = "acctVC"
     }
     struct time{
         var changeableTime: String
