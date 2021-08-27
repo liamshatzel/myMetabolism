@@ -28,12 +28,12 @@
 		0E0EA9A026A4E2560078D576 /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0E0EA97126A4E2550078D576 /* SF-Pro-Text-BlackItalic.otf */; };
 		0E0EA9A226A4E2560078D576 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0E0EA97326A4E2550078D576 /* SF-Pro-Text-Regular.otf */; };
 		0E35EA2C26A3B1D000ECFE0F /* mdi_alarm-check.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0E35EA2B26A3B1D000ECFE0F /* mdi_alarm-check.svg */; };
+		0E5DC8D126D8388D00C12BF9 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DC8D026D8388D00C12BF9 /* StatsViewController.swift */; };
+		0E5DC8D526D9614300C12BF9 /* AcctViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5DC8D426D9614300C12BF9 /* AcctViewController.swift */; };
 		0E6EABEE26D1AC9F00A01049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB8354126A204E70006EC99 /* Assets.xcassets */; };
 		0E8E9CE926D2DB4700F0A16C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CE826D2DB4700F0A16C /* TabBarController.swift */; };
 		0E8E9CEB26D2DC0700F0A16C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */; };
 		0E8E9CED26D2DEED00F0A16C /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */; };
-		0E8E9CF026D4680100F0A16C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEF26D4680100F0A16C /* ProfileViewController.swift */; };
-		0E8E9CF226D48BE600F0A16C /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CF126D48BE600F0A16C /* PopUpViewController.swift */; };
 		0E8E9CF426D56D5B00F0A16C /* TimePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */; };
 		0EB8353926A204E50006EC99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353826A204E50006EC99 /* AppDelegate.swift */; };
 		0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353A26A204E50006EC99 /* SceneDelegate.swift */; };
@@ -71,11 +71,11 @@
 		0E0EA97126A4E2550078D576 /* SF-Pro-Text-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BlackItalic.otf"; sourceTree = "<group>"; };
 		0E0EA97326A4E2550078D576 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		0E35EA2B26A3B1D000ECFE0F /* mdi_alarm-check.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mdi_alarm-check.svg"; sourceTree = "<group>"; };
+		0E5DC8D026D8388D00C12BF9 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		0E5DC8D426D9614300C12BF9 /* AcctViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcctViewController.swift; sourceTree = "<group>"; };
 		0E8E9CE826D2DB4700F0A16C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
-		0E8E9CEF26D4680100F0A16C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		0E8E9CF126D48BE600F0A16C /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePopUpViewController.swift; sourceTree = "<group>"; };
 		0EB8353526A204E50006EC99 /* MyMetabolism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMetabolism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB8353826A204E50006EC99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -197,9 +197,9 @@
 				0EB8354E26A205440006EC99 /* LoginViewController.swift */,
 				0EB8355026A205620006EC99 /* HomeViewController.swift */,
 				0EB8353C26A204E50006EC99 /* ViewController.swift */,
-				0E8E9CEF26D4680100F0A16C /* ProfileViewController.swift */,
-				0E8E9CF126D48BE600F0A16C /* PopUpViewController.swift */,
 				0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */,
+				0E5DC8D026D8388D00C12BF9 /* StatsViewController.swift */,
+				0E5DC8D426D9614300C12BF9 /* AcctViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -370,16 +370,16 @@
 				0EB8353D26A204E50006EC99 /* ViewController.swift in Sources */,
 				0EB8353926A204E50006EC99 /* AppDelegate.swift in Sources */,
 				0E8E9CEB26D2DC0700F0A16C /* ProfileNavigationController.swift in Sources */,
+				0E5DC8D526D9614300C12BF9 /* AcctViewController.swift in Sources */,
 				0EB8355626A214FD0006EC99 /* Utilities.swift in Sources */,
 				0E8E9CE926D2DB4700F0A16C /* TabBarController.swift in Sources */,
 				0E8E9CED26D2DEED00F0A16C /* HomeNavigationController.swift in Sources */,
-				0E8E9CF026D4680100F0A16C /* ProfileViewController.swift in Sources */,
-				0E8E9CF226D48BE600F0A16C /* PopUpViewController.swift in Sources */,
 				0E8E9CF426D56D5B00F0A16C /* TimePopUpViewController.swift in Sources */,
 				0EB8354D26A205380006EC99 /* SignUpViewController.swift in Sources */,
 				0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */,
 				0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */,
 				0EB8355126A205620006EC99 /* HomeViewController.swift in Sources */,
+				0E5DC8D126D8388D00C12BF9 /* StatsViewController.swift in Sources */,
 				0EB8355A26A23BAB0006EC99 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

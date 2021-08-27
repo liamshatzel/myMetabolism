@@ -1,19 +1,18 @@
 //
-//  ProfileViewController.swift
+//  AcctViewController.swift
 //  MyMetabolism
 //
-//  Created by Liam Shatzel on 8/23/21.
+//  Created by Liam Shatzel on 8/27/21.
 //  Copyright © 2021 Liam Shatzel. All rights reserved.
 //
 
 import Foundation
 import UIKit
+import Firebase
 import FirebaseAuth
 
-class ProfileViewController: UIViewController{
-    
-    
-    @IBAction func signOutButton_tapped(_ sender: Any) {
+class AcctViewController: UIViewController{
+    @IBAction func signOut_Tapped(_ sender: Any) {
         let auth = Auth.auth()
         do {
             try auth.signOut()
@@ -26,9 +25,7 @@ class ProfileViewController: UIViewController{
             print(err)
         }
     }
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
     }
 }

@@ -48,7 +48,7 @@
                                 </subviews>
                             </stackView>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
-                                <rect key="frame" x="98" y="358" width="218" height="61"/>
+                                <rect key="frame" x="98" y="359.5" width="218" height="59.5"/>
                                 <string key="text">Track your circadian rythms
 in one click
 </string>
@@ -57,7 +57,7 @@ in one click
                                 <nil key="highlightedColor"/>
                             </label>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
-                                <rect key="frame" x="115" y="318.5" width="184" height="20.5"/>
+                                <rect key="frame" x="115" y="320.5" width="184" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@ in one click
                                 <rect key="frame" x="96" y="33" width="222" height="88"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
-                                <rect key="frame" x="98" y="151" width="219" height="24"/>
+                                <rect key="frame" x="98" y="151" width="219" height="23.5"/>
                                 <fontDescription key="fontDescription" name="SFPro-Black" family="SF Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -188,7 +188,7 @@ in one click
         <!--Home Navigation Controller-->
         <scene sceneID="lVA-Ue-5Xk">
             <objects>
-                <navigationController storyboardIdentifier="homeC" id="Kqb-O9-Q4D" customClass="HomeNavigationController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeC" id="Kqb-O9-Q4D" customClass="HomeNavigationController" customModule="MyMetabolism" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="PDb-ga-BEj">
                         <color key="badgeColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -207,7 +207,7 @@ in one click
         <!--Profile Navigation Controller-->
         <scene sceneID="Z9G-yM-4HH">
             <objects>
-                <navigationController id="FX0-Vi-0jc" customClass="ProfileNavigationController" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="overFullScreen" id="FX0-Vi-0jc" customClass="ProfileNavigationController" customModule="MyMetabolism" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="1j8-sf-4Ab">
                         <color key="badgeColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -216,7 +216,7 @@ in one click
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="P44-si-p13" kind="relationship" relationship="rootViewController" id="euN-PH-t5N"/>
+                        <segue destination="GKU-xo-1eC" kind="relationship" relationship="rootViewController" id="EcR-kW-q5l"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiZ-tA-HIP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,7 +226,7 @@ in one click
         <!--Stats Navigation Controller-->
         <scene sceneID="9az-Ti-ltW">
             <objects>
-                <navigationController storyboardIdentifier="statsC" id="GSX-z4-n1b" customClass="StatsNavigationController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="statsC" id="GSX-z4-n1b" customClass="StatsNavigationController" customModule="MyMetabolism" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="chart.pie.fill" catalog="system" id="s0X-s7-wgJ">
                         <color key="badgeColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
@@ -245,7 +245,7 @@ in one click
         <!--Home View Controller-->
         <scene sceneID="bZd-lq-pAv">
             <objects>
-                <viewController storyboardIdentifier="homeVC" id="6U9-8T-T9v" userLabel="Home View Controller" customClass="HomeViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeVC" id="6U9-8T-T9v" userLabel="Home View Controller" customClass="HomeViewController" customModule="MyMetabolism" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7t-oW-rD7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,96 +298,60 @@ in one click
         <!--Statistics-->
         <scene sceneID="Aru-6x-L0q">
             <objects>
-                <viewController storyboardIdentifier="statsVC" id="Ja8-DQ-4Rk" customClass="StatsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="statsVC" id="Ja8-DQ-4Rk" customClass="StatsViewController" customModule="MyMetabolism" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GiH-iH-ZZk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQA-iX-oRw">
+                                <rect key="frame" x="169.5" y="431.5" width="75" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kQA-iX-oRw" firstAttribute="centerY" secondItem="GiH-iH-ZZk" secondAttribute="centerY" id="3bg-V9-YAu"/>
+                            <constraint firstItem="kQA-iX-oRw" firstAttribute="centerX" secondItem="GiH-iH-ZZk" secondAttribute="centerX" id="5XQ-Pg-sm8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dw2-q3-4VB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Statistics" id="oSB-xh-by0"/>
+                    <connections>
+                        <outlet property="timeFinishLabel" destination="kQA-iX-oRw" id="Yl1-n5-PLq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJo-QU-zz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4235" y="613"/>
         </scene>
         <!--Profile-->
-        <scene sceneID="NAm-Gw-bun">
+        <scene sceneID="rya-wv-TPa">
             <objects>
-                <viewController storyboardIdentifier="profileVC" id="P44-si-p13" customClass="ProfileViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZsS-89-e6z" customClass="ProfileViewController">
+                <viewController storyboardIdentifier="acctVC" id="GKU-xo-1eC" customClass="AcctViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tUS-pJ-Se2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="gHS-wV-7id"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="JSs-g2-tIM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="fYn-7u-VB0">
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="tsx-zI-F9A">
+                    <navigationItem key="navigationItem" title="Profile" id="rau-SG-mp2">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="nRc-48-cEc">
                             <connections>
-                                <action selector="signOutButton_tapped:" destination="P44-si-p13" id="d0F-iF-fbZ"/>
+                                <action selector="signOut_Tapped:" destination="GKU-xo-1eC" id="Fst-Tl-6Eb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BbS-6r-l08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEF-jc-veE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5012" y="613"/>
-        </scene>
-        <!--Pop Up View Controller-->
-        <scene sceneID="roy-o5-7Eq">
-            <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="1rz-fV-JZF" customClass="PopUpViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FOA-TY-f3S">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BAE-Kg-ZLk">
-                                <rect key="frame" x="54" y="355" width="307" height="186"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Time Finished Eating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MP-zj-r1z">
-                                        <rect key="frame" x="0.0" y="0.0" width="307" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoD-LF-7VX">
-                                        <rect key="frame" x="132" y="148" width="43" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Log It!"/>
-                                        <connections>
-                                            <action selector="logTime_TouchUpInside:" destination="1rz-fV-JZF" eventType="touchUpInside" id="a2F-TQ-73W"/>
-                                        </connections>
-                                    </button>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vzU-bq-09s">
-                                        <rect key="frame" x="0.0" y="50" width="307" height="96"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </datePicker>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.87265220207253891" green="0.87265220207253891" blue="0.87265220207253891" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="KJd-t9-iUQ"/>
-                    </view>
-                    <connections>
-                        <outlet property="datePicker" destination="vzU-bq-09s" id="jXg-0n-9h3"/>
-                        <outlet property="labelTitle" destination="9MP-zj-r1z" id="36h-yR-L1h"/>
-                        <outlet property="lableTitle" destination="9MP-zj-r1z" id="cxn-zt-GUk"/>
-                        <outlet property="logButton" destination="MoD-LF-7VX" id="dnd-MA-mKu"/>
-                        <outlet property="timePicker" destination="vzU-bq-09s" id="JYc-Th-J3x"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZd-UW-5Z2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2236" y="1393"/>
         </scene>
         <!--Time Pop Up View Controller-->
         <scene sceneID="iII-bM-JBt">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="V8h-9B-rcC" customClass="TimePopUpViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="V8h-9B-rcC" customClass="TimePopUpViewController" customModule="MyMetabolism" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GN5-Si-usG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
