@@ -48,7 +48,7 @@
                                 </subviews>
                             </stackView>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
-                                <rect key="frame" x="98" y="359.5" width="218" height="59.5"/>
+                                <rect key="frame" x="98" y="358" width="218" height="61"/>
                                 <string key="text">Track your circadian rythms
 in one click
 </string>
@@ -57,7 +57,7 @@ in one click
                                 <nil key="highlightedColor"/>
                             </label>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
-                                <rect key="frame" x="115" y="320.5" width="184" height="20"/>
+                                <rect key="frame" x="115" y="318.5" width="184" height="20.5"/>
                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@ in one click
                                 <rect key="frame" x="96" y="33" width="222" height="88"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
-                                <rect key="frame" x="98" y="151" width="219" height="23.5"/>
+                                <rect key="frame" x="98" y="151" width="219" height="24"/>
                                 <fontDescription key="fontDescription" name="SFPro-Black" family="SF Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -309,22 +309,33 @@ in one click
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEQ-WQ-n1k">
+                                <rect key="frame" x="168" y="333" width="78" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kQA-iX-oRw" firstAttribute="centerY" secondItem="GiH-iH-ZZk" secondAttribute="centerY" id="3bg-V9-YAu"/>
                             <constraint firstItem="kQA-iX-oRw" firstAttribute="centerX" secondItem="GiH-iH-ZZk" secondAttribute="centerX" id="5XQ-Pg-sm8"/>
+                            <constraint firstItem="PEQ-WQ-n1k" firstAttribute="top" secondItem="dw2-q3-4VB" secondAttribute="top" constant="245" id="8MM-2b-3hO"/>
+                            <constraint firstItem="PEQ-WQ-n1k" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="168" id="JdB-kp-0Zy"/>
+                            <constraint firstItem="kQA-iX-oRw" firstAttribute="top" secondItem="PEQ-WQ-n1k" secondAttribute="bottom" constant="68.5" id="WN3-0A-3xu"/>
+                            <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="PEQ-WQ-n1k" secondAttribute="trailing" constant="168" id="sft-x4-AkL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dw2-q3-4VB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Statistics" id="oSB-xh-by0"/>
                     <connections>
+                        <outlet property="gradeLabel" destination="PEQ-WQ-n1k" id="AIS-3y-Jf4"/>
                         <outlet property="timeFinishLabel" destination="kQA-iX-oRw" id="Yl1-n5-PLq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJo-QU-zz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4235" y="613"/>
+            <point key="canvasLocation" x="4234.7826086956529" y="612.72321428571422"/>
         </scene>
         <!--Profile-->
         <scene sceneID="rya-wv-TPa">
