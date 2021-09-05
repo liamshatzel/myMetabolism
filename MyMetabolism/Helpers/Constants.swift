@@ -9,7 +9,6 @@
 import Foundation
 
 struct Constants {
-    
     struct Storyboard {
         static let homeViewController = "homeVC"
         static let loginViewController = "loginVC"
@@ -29,20 +28,11 @@ struct Constants {
         }
     }
     struct LogTime{
-        var user: String
-        var time: String
-        var firstname: String
-        var lastname: String
-        var uid: String
+        var time: [Float]
         
         var dictionary: [String: Any] {
             return [
-                "user": user,
-                "time": time,
-                "firstname": firstname,
-                "lastname": lastname,
-                "uid": uid
-                
+                "time": time
             ]
         }
     }

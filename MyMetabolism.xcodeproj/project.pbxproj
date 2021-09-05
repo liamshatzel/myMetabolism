@@ -35,6 +35,7 @@
 		0E8E9CEB26D2DC0700F0A16C /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */; };
 		0E8E9CED26D2DEED00F0A16C /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */; };
 		0E8E9CF426D56D5B00F0A16C /* TimePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */; };
+		0E8F92A726E4797B0089072A /* Unused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F92A626E4797B0089072A /* Unused.swift */; };
 		0EB8353926A204E50006EC99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353826A204E50006EC99 /* AppDelegate.swift */; };
 		0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353A26A204E50006EC99 /* SceneDelegate.swift */; };
 		0EB8353D26A204E50006EC99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB8353C26A204E50006EC99 /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		0E8E9CEA26D2DC0700F0A16C /* ProfileNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
 		0E8E9CEC26D2DEED00F0A16C /* HomeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
 		0E8E9CF326D56D5B00F0A16C /* TimePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePopUpViewController.swift; sourceTree = "<group>"; };
+		0E8F92A626E4797B0089072A /* Unused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unused.swift; sourceTree = "<group>"; };
 		0EB8353526A204E50006EC99 /* MyMetabolism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMetabolism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB8353826A204E50006EC99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB8353A26A204E50006EC99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				0EB8355526A214FD0006EC99 /* Utilities.swift */,
 				0EB8355926A23BAB0006EC99 /* Constants.swift */,
+				0E8F92A626E4797B0089072A /* Unused.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				0E8E9CE926D2DB4700F0A16C /* TabBarController.swift in Sources */,
 				0E8E9CED26D2DEED00F0A16C /* HomeNavigationController.swift in Sources */,
 				0E8E9CF426D56D5B00F0A16C /* TimePopUpViewController.swift in Sources */,
+				0E8F92A726E4797B0089072A /* Unused.swift in Sources */,
 				0EB8354D26A205380006EC99 /* SignUpViewController.swift in Sources */,
 				0EB8354F26A205440006EC99 /* LoginViewController.swift in Sources */,
 				0EB8353B26A204E50006EC99 /* SceneDelegate.swift in Sources */,

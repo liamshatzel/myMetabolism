@@ -288,6 +288,7 @@ in one click
                     <navigationItem key="navigationItem" title="Home" id="zAO-ht-Lvn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="logTimeButton" destination="rAV-L2-j7g" id="8kN-fT-WM4"/>
                         <outlet property="timeLabel" destination="aAm-Se-rFj" id="Gmr-r5-Xy7"/>
                     </connections>
                 </viewController>
