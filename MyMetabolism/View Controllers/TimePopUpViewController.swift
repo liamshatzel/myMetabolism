@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class TimePopUpViewController: UIViewController{
     
@@ -34,7 +36,7 @@ class TimePopUpViewController: UIViewController{
     
     @IBAction func logButton_TouchUpInside(_ sender: Any) {
         NotificationCenter.default.post(name: .logInfo, object: self)
-        
+        counter+=1;
         dismiss(animated: true)
     }
     

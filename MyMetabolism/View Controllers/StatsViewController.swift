@@ -12,27 +12,20 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
+//Firestore Document Location
 let docRef = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime").document("time")
+var count : Float = 0
 class StatsViewController: UIViewController{
     @IBOutlet weak var timeFinishLabel: UILabel!
     
     
     @IBOutlet weak var gradeLabel: UILabel!
     
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-  /*      docRef.getDocument(source: .cache) { (document, error) in
-          if let document = document {
-            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-            print("Document data: \(dataDescription)")
-            self.timeFinishLabel.text = document.get("time") as? String
-            let timeFinish = document.get("time") as! String
-            print(timeFinish)
-          } else {
-            print("Document does not exist")
-          }
-        }*/
+
+        //Fetches document from Firestore and Sets timeLabel as time set
         docRef.addSnapshotListener { documentSnapshot, error in
             guard let document = documentSnapshot else {
                 print("Error fetching document: \(error!)")
@@ -41,10 +34,10 @@ class StatsViewController: UIViewController{
             let source = document.metadata.hasPendingWrites ? "Local" : "Server"
             print("\(source) data: \(document.data() ?? [:])")
             self.timeFinishLabel.text = document.get("time") as? String
-            let timeDocRef = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime").document("arrTime")
+           
             
             
-            
+            //Formats the date into a string and then into a float
             let timeFinish = document.get("time") as! String
             let timeArr : [String] = timeFinish.components(separatedBy: " ")
             var time : String = timeArr[0]
@@ -53,10 +46,27 @@ class StatsViewController: UIViewController{
             var hours : Int = Int(timeSplit[0]) ?? 0
             let decMins : String = "." + timeSplit[1]
             let mins = (decMins as NSString).floatValue
-            let randomFloat = Float.random(in: 0.000001..<0.001)
-            let totalTime = Float(hours) + mins + randomFloat
-            //timeDocRef.setData(["timeList": [totalTime]])
-            timeDocRef.updateData(["timeList" : FieldValue.arrayUnion([totalTime])])
+            
+            print(count)
+            let totalTime = Float(hours) + mins
+            let totalTime2 = String(totalTime)
+           
+          
+            //creates a new collection in firestore
+            let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("timeList")
+   
+            //adds input value into new collection in firestore as a new document
+            var ref: DocumentReference? = Firestore.firestore().collection("users").document(currentUser())
+            timeCollection.document("timeList").setData(["time\(counter)": totalTime2], merge: true) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(ref!.documentID)")
+                }
+            }
+
+            
+
             print(totalTime)
             if (dayNight == "PM"){
                 hours = hours + 12
@@ -84,7 +94,6 @@ class StatsViewController: UIViewController{
             print(mins)
             print(time)
             print(dayNight)
-            //print(timeFinish)
         }
     }
 }

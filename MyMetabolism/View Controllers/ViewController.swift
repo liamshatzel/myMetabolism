@@ -46,16 +46,11 @@ class ViewController: UIViewController {
                 
                 self.view.window?.rootViewController = tabBarController
                 self.view.window?.makeKeyAndVisible()
-                
-            //let tabBarController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.tabBarController) as? TabBarContoller
-            //self.view.window?.rootViewController = tabBarController
-            //self.view.window?.makeKeyAndVisible()
+       
             } else {
                 print ("not signed in")
                 
-                /*let signUpViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.signUpViewController) as? SignUpViewController
-                self.view.window?.rootViewController = signUpViewController
-                self.view.window?.makeKeyAndVisible()*/
+              
             }
             // [END_EXCLUDE]
         }
@@ -69,25 +64,18 @@ class ViewController: UIViewController {
         //intro text styling
         introText.textColor = UIColor(red: 0.176, green: 0.047, blue: 0.341, alpha: 1)
 
-        //introText.font = UIFont(name: "Lato-Bold", size: 24)
+
         
         //description 1 styling
         desc1.textColor = UIColor(red: 0.176, green: 0.047, blue: 0.341, alpha: 1)
 
-        //desc1.font = UIFont(name: "SFPro-Bold", size: 18)
+//description 2 styling
         
-        //description 2 styling
         desc2.alpha = 0.7
 
         desc2.textColor = UIColor(red: 0.176, green: 0.047, blue: 0.341, alpha: 1)
 
-        //desc2.font = UIFont(name: "SFPro-Regular", size: 16)
-        
-        /*//Display all font families
-         for family in UIFont.familyNames.sorted() {
-               let names = UIFont.fontNames(forFamilyName: family)
-               print("Family: \(family) Font names: \(names)")
-        }*/
+
 
     }
     func setupElements(){
@@ -98,17 +86,6 @@ class ViewController: UIViewController {
         }
     
     
-  /*  private func validateAuth() {
-        if Auth.auth().currentUser != nil{
-           HomeViewController()
-        } else{
-            let vc = LoginViewController()
-            let nav = UINavigationController(rootViewController: vc)
-            nav.modalPresentationStyle = .fullScreen
-            present(nav, animated: false)
-        }
-    } */
-
 
 }
 
