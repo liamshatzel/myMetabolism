@@ -15,6 +15,14 @@ import FirebaseFirestore
 //Firestore Document Location
 let docRef = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime").document("time")
 var count : Float = 0
+
+func getDayOfWeek() -> Int? {
+    let todayDate = Date()
+    let myCalendar = Calendar(identifier: .gregorian)
+    let weekDay = myCalendar.component(.weekday, from: todayDate)
+    return weekDay
+}
+
 class StatsViewController: UIViewController{
     @IBOutlet weak var timeFinishLabel: UILabel!
     
@@ -52,19 +60,59 @@ class StatsViewController: UIViewController{
             let totalTime2 = String(totalTime)
            
           
-            //creates a new collection in firestore
+            //references time collection in firestore
             let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("timeList")
    
             //adds input value into new collection in firestore as a new document
+          
             var ref: DocumentReference? = Firestore.firestore().collection("users").document(currentUser())
-            timeCollection.document("timeList").setData(["time\(counter)": totalTime2], merge: true) { err in
+            timeCollection.document("timeList").setData(["time": timeFinish], merge: true) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
                 } else {
                     print("Document added with ID: \(ref!.documentID)")
                 }
             }
+            //implementing current day dictionary
+         
+            var weekdayDict : [String : Any] = [
+                    
+                          "7": "00",
+                          "6": "00",
+                          "5": "00",
+                          "4": "00",
+                          "3": "00",
+                          "2": "00",
+                          "1": "00"
+                          ]
+            
+            //var dayOfWeek : String = " "
+            let today = String(getDayOfWeek()!)
+//            switch today {
+//            case 7:
+//                dayOfWeek = "mon"
+//            case 6:
+//                dayOfWeek = "tues"
+//            case 5:
+//                dayOfWeek = "wed"
+//            case 4:
+//                dayOfWeek = "thurs"
+//            case 3:
+//                dayOfWeek = "fri"
+//            case 2:
+//                dayOfWeek = "sat"
+//            case 1:
+//                dayOfWeek = "sun"
+//            default:
+//                dayOfWeek = "-"
+//            }
+            weekdayDict[today] = time
 
+            timeCollection.document("time").setData(weekdayDict, merge: true)
+
+            
+            print("today" + String(getDayOfWeek()!))
+            
             
 
             print(totalTime)
