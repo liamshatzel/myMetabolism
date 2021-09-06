@@ -36,4 +36,25 @@ struct Constants {
             ]
         }
     }
+    struct days{
+        var  mon: String
+        var tues: String
+        var wed: String
+        var thurs: String
+        var fri: String
+        var sat: String
+        var sun: String
+        var dictionary: [String: Any]{
+            return[
+                "mon": mon,
+                "tues": tues,
+                "wed": wed,
+                "thurs": thurs,
+                "fri": fri,
+                "sat": sat,
+                "sun": sun
+                
+            ]
+        }
+    }
 }
