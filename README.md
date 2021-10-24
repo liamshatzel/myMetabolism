@@ -1,8 +1,8 @@
-#myMetabolism - A TRF Tracker
+# myMetabolism - A TRF Tracker
 
 <p>I created this app to better track TRF, and score adherence to a set schedule.</p>
 
-##Technologies
+## Technologies
 -Firebase
 -Firestore
 -Swift + Xcode
