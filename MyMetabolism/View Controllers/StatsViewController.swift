@@ -106,10 +106,39 @@ class StatsViewController: UIViewController{
 //            default:
 //                dayOfWeek = "-"
 //            }
-            weekdayDict[today] = time
-
-            timeCollection.document("time").setData(weekdayDict, merge: true)
-
+            
+            
+           // weekdayDict[today] = time
+            
+            /*timeCollection.document("time").setData(["id" : "uid", "times" : [
+            
+                  "7": "00",
+                  "6": "00",
+                  "5": "00",
+                  "4": "00",
+                  "3": "00",
+                  "2": "00",
+                  "1": "00"
+                  ]])*/
+            timeCollection.document("time").getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    weekdayDict = document.data()!
+                    print("Document data: \(dataDescription)")
+                } else {
+                    print("Document does not exist")
+                }
+            }
+/*
+            timeCollection.document("time").updateData(["times.": "\(time)"])
+             { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                }
+            }
+*/
             
             print("today" + String(getDayOfWeek()!))
             

@@ -59,6 +59,7 @@ class HomeViewController: UIViewController {
         if (later <= now){
             logTimeButton.isEnabled = false
             
+            
         
         }
     }
