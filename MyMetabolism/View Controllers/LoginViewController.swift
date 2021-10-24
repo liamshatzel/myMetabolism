@@ -60,6 +60,8 @@ class LoginViewController: UIViewController {
     }
     */
 
+    
+
     @IBAction func loginTapped(_ sender: Any) {
         //validate text field
         let error = validateFields()
@@ -83,7 +85,7 @@ class LoginViewController: UIViewController {
                 let HomeViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController)
                 let HomeViewNC = UINavigationController(rootViewController: HomeViewTab!)
                 
-                let ProfileViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.profileViewController)
+                let ProfileViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.acctViewController)
                 let ProfileViewNC = UINavigationController(rootViewController: ProfileViewTab!)
                 
                 let StatsViewTab: UIViewController? = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.statsViewController)

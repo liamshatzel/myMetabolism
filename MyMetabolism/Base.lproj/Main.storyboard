@@ -342,7 +342,7 @@ in one click
         <scene sceneID="rya-wv-TPa">
             <objects>
                 <viewController storyboardIdentifier="acctVC" id="GKU-xo-1eC" customClass="AcctViewController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tUS-pJ-Se2">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="profileVC" id="tUS-pJ-Se2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -434,6 +434,7 @@ in one click
                                         <rect key="frame" x="0.0" y="140" width="334" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AL3-ok-ybi"/>
+                                            <constraint firstAttribute="width" constant="334" id="Paj-11-wbF"/>
                                         </constraints>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -495,6 +496,7 @@ in one click
         <!--Tab Bar Controller-->
         <scene sceneID="JTe-YS-iF3">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNT-qj-6Lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="tabC" id="U0Y-O8-YnB" customClass="TabBarController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h5i-DI-nQ3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -507,7 +509,6 @@ in one click
                         <segue destination="FX0-Vi-0jc" kind="relationship" relationship="viewControllers" id="PZw-LY-G7b"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uNT-qj-6Lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4081" y="-850"/>
         </scene>

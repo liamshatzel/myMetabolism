@@ -107,8 +107,6 @@ class SignUpViewController: UIViewController {
 
                 }
             }
-            
-            
         }
         
         //Sign up user
