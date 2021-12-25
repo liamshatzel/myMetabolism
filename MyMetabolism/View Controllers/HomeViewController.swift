@@ -44,11 +44,7 @@ class HomeViewController: UIViewController {
             let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime)
 
             timeCollection.document("time").setData(changeableTime.dictionary, merge: true)
-
-
         }
-
-        
     }
     
     @IBAction func logTimeButton_TouchUpInside(_ sender: Any) {

@@ -46,8 +46,8 @@ class StatsViewController: UIViewController{
             
             
             //Formats the date into a string and then into a float
-            let timeFinish = document.get("time") as! String
-            let timeArr : [String] = timeFinish.components(separatedBy: " ")
+            let timeFinish = document.get("time") as! String?
+            guard let timeArr : [String] = (timeFinish?.components(separatedBy: " ")) else {return}
             var time : String = timeArr[0]
             var dayNight : String = timeArr[1]
             var timeSplit : [String] = time.components(separatedBy: ":")

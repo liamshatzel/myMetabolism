@@ -146,7 +146,7 @@ in one click
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
-                                            <action selector="signUpTapped:" destination="buW-2l-7F6" eventType="touchUpInside" id="omP-ll-vYA"/>
+                                            <action selector="signUpTapped:" destination="buW-2l-7F6" eventType="touchUpInside" id="rRJ-rd-xBo"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-sO-ZQY">
@@ -173,12 +173,12 @@ in one click
                         <viewLayoutGuide key="safeArea" id="pBD-Hk-1QK"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="kYR-93-O9K" id="lb9-CL-2HZ"/>
-                        <outlet property="errorLabel" destination="EvP-sO-ZQY" id="hFB-EY-KCC"/>
-                        <outlet property="firstNameTextField" destination="C2c-U3-GuD" id="JeR-yw-QU0"/>
-                        <outlet property="lastNameTextField" destination="5XB-bu-s6R" id="S7x-gb-pbs"/>
-                        <outlet property="passwordTextField" destination="3C3-GY-SrV" id="nEp-BT-sG1"/>
-                        <outlet property="signUpButton" destination="Dbn-ls-Uql" id="htc-mK-PIO"/>
+                        <outlet property="emailTextField" destination="kYR-93-O9K" id="RSA-od-Yo4"/>
+                        <outlet property="errorLabel" destination="EvP-sO-ZQY" id="axh-ub-Lc5"/>
+                        <outlet property="firstNameTextField" destination="C2c-U3-GuD" id="kRq-0A-9CI"/>
+                        <outlet property="lastNameTextField" destination="5XB-bu-s6R" id="Nlp-sc-dx4"/>
+                        <outlet property="passwordTextField" destination="3C3-GY-SrV" id="YUV-Yj-FRv"/>
+                        <outlet property="signUpButton" destination="Dbn-ls-Uql" id="iSQ-Qc-GmP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Enc-W3-BMe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -304,6 +304,9 @@ in one click
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Score" translatesAutoresizingMaskIntoConstraints="NO" id="vcJ-3q-yKD">
+                                <rect key="frame" x="87" y="284" width="240" height="128"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQA-iX-oRw">
                                 <rect key="frame" x="169.5" y="431.5" width="75" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -322,8 +325,12 @@ in one click
                             <constraint firstItem="kQA-iX-oRw" firstAttribute="centerY" secondItem="GiH-iH-ZZk" secondAttribute="centerY" id="3bg-V9-YAu"/>
                             <constraint firstItem="kQA-iX-oRw" firstAttribute="centerX" secondItem="GiH-iH-ZZk" secondAttribute="centerX" id="5XQ-Pg-sm8"/>
                             <constraint firstItem="PEQ-WQ-n1k" firstAttribute="top" secondItem="dw2-q3-4VB" secondAttribute="top" constant="245" id="8MM-2b-3hO"/>
+                            <constraint firstItem="kQA-iX-oRw" firstAttribute="top" secondItem="vcJ-3q-yKD" secondAttribute="bottom" constant="19.5" id="ANT-3y-b6h"/>
+                            <constraint firstItem="vcJ-3q-yKD" firstAttribute="top" secondItem="dw2-q3-4VB" secondAttribute="top" constant="196" id="Hk9-x0-zGT"/>
                             <constraint firstItem="PEQ-WQ-n1k" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="168" id="JdB-kp-0Zy"/>
+                            <constraint firstItem="vcJ-3q-yKD" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="87" id="Pa9-s1-dhh"/>
                             <constraint firstItem="kQA-iX-oRw" firstAttribute="top" secondItem="PEQ-WQ-n1k" secondAttribute="bottom" constant="68.5" id="WN3-0A-3xu"/>
+                            <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="vcJ-3q-yKD" secondAttribute="trailing" constant="87" id="mm0-mE-4vq"/>
                             <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="PEQ-WQ-n1k" secondAttribute="trailing" constant="168" id="sft-x4-AkL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dw2-q3-4VB"/>
@@ -496,7 +503,6 @@ in one click
         <!--Tab Bar Controller-->
         <scene sceneID="JTe-YS-iF3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uNT-qj-6Lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="tabC" id="U0Y-O8-YnB" customClass="TabBarController" customModule="MyMetabolism" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h5i-DI-nQ3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -509,11 +515,13 @@ in one click
                         <segue destination="FX0-Vi-0jc" kind="relationship" relationship="viewControllers" id="PZw-LY-G7b"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uNT-qj-6Lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4081" y="-850"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Score" width="188" height="188"/>
         <image name="chart.pie.fill" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="mdi_alarm-check" width="88" height="88"/>
