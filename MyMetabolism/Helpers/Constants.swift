@@ -23,7 +23,9 @@ struct Constants {
         var changeableTime: String
         var dictionary: [String: Any]{
             return[
-                "time": changeableTime
+                "time": changeableTime,
+                "date": Date(),
+                "dayOfWeek": getDayOfWeek()
             ]
         }
     }

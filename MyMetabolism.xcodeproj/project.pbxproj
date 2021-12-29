@@ -217,7 +217,6 @@
 			children = (
 				0EB8355526A214FD0006EC99 /* Utilities.swift */,
 				0EB8355926A23BAB0006EC99 /* Constants.swift */,
-				0E8F92A626E4797B0089072A /* Unused.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -225,6 +224,7 @@
 		0EF9517F2777DE26005F9C10 /* Unused */ = {
 			isa = PBXGroup;
 			children = (
+				0E8F92A626E4797B0089072A /* Unused.swift */,
 				0EB8354C26A205380006EC99 /* SignUpViewController1.swift */,
 			);
 			path = Unused;

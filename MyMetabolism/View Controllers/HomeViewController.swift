@@ -16,10 +16,11 @@ func currentUser() -> String{
     let uid = user!.uid
     return uid
 }
-//var now : Date? = nil
-var counter = 0
-var timer = Timer()
-var isCounting = false
+
+let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime")
+
+let today = getDayOfWeek()
+var prev: Int = -1
 
 class HomeViewController: UIViewController {
     
@@ -29,41 +30,40 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        logTimeButton.isEnabled = false
         
-   
-        
+        //TODO: Fetch and determine if it has been 12 hrs since user has logged time finished
+       
+        let docRef = timeCollection.document("time")
+        docRef.addSnapshotListener { documentSnapshot, error in
+            guard let document = documentSnapshot else {
+                print("Error fetching document: \(error!)")
+                return
+            }
+           prev = document.get("dayOfWeek") as! Int
+        }
+        //TODO: Disable button if time already logged today.
+        //if(today != prev){
+                  // logTimeButton.isEnabled = true
+          //  }
+
         //Notifications New Way
         NotificationCenter.default.addObserver(forName: .logInfo, object: nil, queue: OperationQueue.main) { (notification) in
             let timePopUpVC = notification.object as! TimePopUpViewController
             self.timeLabel.text = timePopUpVC.formattedTime
-            
-
-            let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime")
-            
 
             let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime)
 
             timeCollection.document("time").setData(changeableTime.dictionary, merge: true)
         }
+        Utilities.styleFilledButton(self.logTimeButton)
+    
     }
     
+  
     @IBAction func logTimeButton_TouchUpInside(_ sender: Any) {
         
-        count = count + 0.001
-        let now = Date()
-        let later  = Date().addingTimeInterval(30)
-        if (later <= now){
-            logTimeButton.isEnabled = false
-            
-            
-        
-        }
     }
-    
-    @objc func updateTimer(){
-        counter = counter - 28800
-    }
-
 }
 
       
