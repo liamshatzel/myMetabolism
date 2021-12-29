@@ -75,4 +75,10 @@ class Utilities {
         return passwordTest.evaluate(with: password)
     }
     
+    func getDayOfWeek(todayDate: Date) -> Int? {
+        let myCalendar = Calendar(identifier: .gregorian)
+        let weekDay = myCalendar.component(.weekday, from: todayDate)
+        return weekDay
+    }
+    
 }

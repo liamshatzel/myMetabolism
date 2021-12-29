@@ -31,12 +31,13 @@ class TimePopUpViewController: UIViewController{
         
         super.viewDidLoad()
         
+        Utilities.styleFilledButton(logButton)
+        
         
     }
     
     @IBAction func logButton_TouchUpInside(_ sender: Any) {
         NotificationCenter.default.post(name: .logInfo, object: self)
-        counter+=1;
         dismiss(animated: true)
     }
     
