@@ -20,32 +20,24 @@ func currentUser() -> String{
 let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime")
 
 let today = getDayOfWeek()
-var prev: Int = -1
 
 class HomeViewController: UIViewController {
-    
+
     @IBOutlet weak var logTimeButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
-    
-    
+
+
     override func viewDidLoad() {
+        
+
+        
         super.viewDidLoad()
-        logTimeButton.isEnabled = false
+        disableButton()
+        //logTimeButton.isEnabled = false
         
         //TODO: Fetch and determine if it has been 12 hrs since user has logged time finished
-       
-        let docRef = timeCollection.document("time")
-        docRef.addSnapshotListener { documentSnapshot, error in
-            guard let document = documentSnapshot else {
-                print("Error fetching document: \(error!)")
-                return
-            }
-           prev = document.get("dayOfWeek") as! Int
-        }
+
         //TODO: Disable button if time already logged today.
-        //if(today != prev){
-                  // logTimeButton.isEnabled = true
-          //  }
 
         //Notifications New Way
         NotificationCenter.default.addObserver(forName: .logInfo, object: nil, queue: OperationQueue.main) { (notification) in
@@ -57,12 +49,26 @@ class HomeViewController: UIViewController {
             timeCollection.document("time").setData(changeableTime.dictionary, merge: true)
         }
         Utilities.styleFilledButton(self.logTimeButton)
-    
     }
     
   
     @IBAction func logTimeButton_TouchUpInside(_ sender: Any) {
         
+    }
+    
+    func disableButton(){
+        let time = timeCollection.document("time")
+        var prev: Int = -1
+        docRef.addSnapshotListener { documentSnapshot, error in
+            guard let document = documentSnapshot else {
+                print("Error fetching document: \(error!)")
+                return
+            }
+            prev = document.get("dayOfWeek") as! Int
+            if(prev == today){
+                self.logTimeButton.isEnabled = false
+            }
+        }
     }
 }
 
