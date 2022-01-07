@@ -33,38 +33,57 @@ class HomeViewController: UIViewController {
         
         super.viewDidLoad()
         disableButton()
-        //logTimeButton.isEnabled = false
         
-        //TODO: Fetch and determine if it has been 12 hrs since user has logged time finished
-
-        //TODO: Disable button if time already logged today.
-
-        //Notifications New Way
+        //Get time value from pop up
         NotificationCenter.default.addObserver(forName: .logInfo, object: nil, queue: OperationQueue.main) { (notification) in
             let timePopUpVC = notification.object as! TimePopUpViewController
             self.timeLabel.text = timePopUpVC.formattedTime
 
-            let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime)
+            let newTime = timeToFloat(timeString: timePopUpVC.formattedTime)
+            docRef.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.get("time") ?? "nil"
+                    print("Document data: \(dataDescription)")
+                    let oldTime = timeToFloat(timeString: dataDescription as! String)
+                    let avg: Float = (oldTime + newTime) / 2
+                    print("\(avg)")
+                    
+                    let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime, overallAverage: avg)
+                        
+                    timeCollection.document("time").setData(changeableTime.dictionary, merge: true)
+                } else {
+                    print("Document does not exist")
+                }
 
-            timeCollection.document("time").setData(changeableTime.dictionary, merge: true)
+            }
         }
         Utilities.styleFilledButton(self.logTimeButton)
     }
     
-  
     @IBAction func logTimeButton_TouchUpInside(_ sender: Any) {
-        
+        let timeList = Firestore.firestore().collection("users").document(currentUser()).collection("timeList")
+        NotificationCenter.default.addObserver(forName: .logInfo, object: nil, queue: OperationQueue.main) { (notification) in
+            let timePopUpVC = notification.object as! TimePopUpViewController
+            timeList.document("\(Date())").setData(["time": timeToFloat(timeString: timePopUpVC.formattedTime), "date": Date()]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+        }
     }
     
     func disableButton(){
-        let time = timeCollection.document("time")
         var prev: Int = -1
         docRef.addSnapshotListener { documentSnapshot, error in
             guard let document = documentSnapshot else {
                 print("Error fetching document: \(error!)")
                 return
             }
-            prev = document.get("dayOfWeek") as! Int
+            //UNCOMMENT FOR FUNCTIONALITY
+            
+            prev = document.get("dayOfWeek") as! Int? ?? -1
             if(prev == today){
                 self.logTimeButton.isEnabled = false
             }

@@ -75,8 +75,6 @@ class ViewController: UIViewController {
 
         desc2.textColor = UIColor(red: 0.176, green: 0.047, blue: 0.341, alpha: 1)
 
-
-
     }
     func setupElements(){
         //Style Buttons

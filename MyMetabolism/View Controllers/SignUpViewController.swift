@@ -101,11 +101,12 @@ class SignUpViewController: UIViewController {
                             self.showError("Error saving user data")
                         }
                     }
+                 //Signed up user
+                self.transitionToHome()
                 }
             }
+  
         }
-        //Signed up user
-        transitionToHome()
     }
     
     func showError(_ message: String) {
