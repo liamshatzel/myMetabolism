@@ -171,3 +171,148 @@ extension HomeViewController: UIPickerViewDelegate {
             //timeDocRef.updateData(["time" : FieldValue.arrayUnion([totalTime])])
 
 
+
+//implementing current day dictionary
+//Formats week number into string representation
+// var dayOfWeek : String = " "
+
+//   let today = Int(getDayOfWeek()!)
+//
+//   switch today {
+//   case 7:
+//       dayOfWeek = "mon"
+//   case 6:
+//       dayOfWeek = "tues"
+//   case 5:
+//       dayOfWeek = "wed"
+//   case 4:
+//       dayOfWeek = "thurs"
+//   case 3:
+//       dayOfWeek = "fri"
+//   case 2:
+//       dayOfWeek = "sat"
+//   case 1:
+//       dayOfWeek = "sun"
+//   default:
+//       dayOfWeek = "-"
+//   }
+
+//            var weekdayDict : [String : Any] = [
+//
+//                          "7": "00",
+//                          "6": "00",
+//                          "5": "00",
+//                          "4": "00",
+//                          "3": "00",
+//                          "2": "00",
+//                          "1": "00"
+//                          ]
+// weekdayDict[today] = time
+
+/*timeCollection.document("time").setData(["id" : "uid", "times" : [
+ 
+ "7": "00",
+ "6": "00",
+ "5": "00",
+ "4": "00",
+ "3": "00",
+ "2": "00",
+ "1": "00"
+ ]])*/
+/*
+ timeCollection.document("time").updateData(["times.": "\(time)"])
+ { err in
+ if let err = err {
+ print("Error updating document: \(err)")
+ } else {
+ print("Document successfully updated")
+ }
+ 
+ */
+
+//print("today " + String(getDayOfWeek()!))
+
+
+
+//print(totalTime)
+//            if (dayNight == "PM"){
+//                hours = hours + 12
+//            }
+
+//        docRef.addSnapshotListener { documentSnapshot, error in
+//            guard let document = documentSnapshot else {
+//                print("Error fetching document: \(error!)")
+//                return
+//            }
+//            let timeFinish = document.get("time") as! String?
+//
+//            guard let timeFinishString: String = (timeFinish) else {return}
+//
+//
+//            //references time collection in firestore
+//            let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("timeList")
+//
+//
+//            //adds input value into new collection in firestore as a new document
+//            let ref: DocumentReference? = Firestore.firestore().collection("users").document(currentUser())
+//
+//            timeCollection.addDocument(data: ["time": timeToFloat(timeString: timeFinishString), "date": Date()]) { err in
+//                if let err = err {
+//                    print("Error adding document: \(err)")
+//                } else {
+//                    print("Document added with ID: \(ref!.documentID)")
+//                }
+//            }
+//         }
+
+
+            //TODO: Add logic to query data and create a weighted average of times
+            
+//            timeCollection.document("time").getDocument { (document, error) in
+//                if let document = document, document.exists {
+//                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                    //weekdayDict = document.data()!
+//                    print("Document data: \(dataDescription)")
+//                } else {
+//                    print("Document does not exist")
+//                }
+//            }
+
+            //TODO: Make single average variable, only needs one read, then write overall average to firestore, repeat each time.
+            //No need to query, simply update average each time. Do I need a global count?
+            
+//            var tot: Float = 0
+//
+//            let timeQuery = timeCollection.whereField("time", isNotEqualTo: NSNull())
+//               timeQuery.getDocuments() { (querySnapshot, err) in
+//                   if let err = err {
+//                       print("Error getting documents: \(err)")
+//                   } else {
+//                       for document in querySnapshot!.documents {
+//                        print("\(document.documentID) => \(document.get("time"))")
+//                        count += 1
+//                        tot += document.get("time") as! Float
+//                    }
+//                        let ovr = tot/count
+//
+//                        switch ovr {
+//                        case 11...18:
+//                            self.gradeLabel.text = "😀"
+//                            print("😀")
+//                        case 19...20:
+//                            self.gradeLabel.text = "🙂"
+//                            print("🙂")
+//                        case 21...22:
+//                            self.gradeLabel.text = "😐"
+//                            print("😐")
+//                        case 22..<23:
+//                            self.gradeLabel.text = "😬"
+//                            print("😬")
+//                        default:
+//                            self.gradeLabel.text = "😳"
+//                            print("😳")
+//                        }
+//                        self.timeFinishLabel.text = timeFormat(ovr)
+//                        print(tot/count)
+//                   }
+//               }
