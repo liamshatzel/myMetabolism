@@ -1,6 +1,6 @@
 # myMetabolism - A TRF Tracker
 
-<p>An app to better track TRF, and score adherence to a set schedule.</p>
+<p>An app to better track TRF and score adherence to a set schedule.</p>
 
 ## Technologies
 - Firebase
