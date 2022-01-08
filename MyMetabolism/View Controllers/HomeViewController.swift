@@ -33,9 +33,6 @@ class HomeViewController: UIViewController {
         
         super.viewDidLoad()
         disableButton()
-
-
-        
         //Get time value from pop up
         NotificationCenter.default.addObserver(forName: .logInfo, object: nil, queue: OperationQueue.main) { (notification) in
             let timePopUpVC = notification.object as! TimePopUpViewController
@@ -53,7 +50,6 @@ class HomeViewController: UIViewController {
                     let oldTime = dataDescription as! Float
                     let localTotal: Float = oldTime + newTime
                     let avg: Float = Float(localTotal / Float(localCount))
-
                     let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime, overallAverage: avg, count: localCount, totalTime: localTotal)
                         
                     timeCollection.setData(changeableTime.dictionary, merge: true) { err in
@@ -65,7 +61,6 @@ class HomeViewController: UIViewController {
                     }
                 } else {
                     print("Document does not exist yet")
-                    
                     //initializes document if it doesnt exist
                     let changeableTime = Constants.time(changeableTime: "00:00 AM", overallAverage: 0.0, count: 1, totalTime: 0.0)
                         
