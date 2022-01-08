@@ -17,7 +17,7 @@ func currentUser() -> String{
     return uid
 }
 
-let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime")
+let timeCollection = Firestore.firestore().collection("users").document(currentUser()).collection("finishTime").document("time")
 
 let today = getDayOfWeek()
 
@@ -29,30 +29,53 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         
-
+        
         
         super.viewDidLoad()
         disableButton()
+
+
         
         //Get time value from pop up
         NotificationCenter.default.addObserver(forName: .logInfo, object: nil, queue: OperationQueue.main) { (notification) in
             let timePopUpVC = notification.object as! TimePopUpViewController
             self.timeLabel.text = timePopUpVC.formattedTime
-
+            
+            //TODO: Fix forced unwraps
+            
             let newTime = timeToFloat(timeString: timePopUpVC.formattedTime)
-            docRef.getDocument { (document, error) in
+            timeCollection.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    let dataDescription = document.get("time") ?? "nil"
+                    let dataDescription = document.get("totalTime") ?? 0.0
                     print("Document data: \(dataDescription)")
-                    let oldTime = timeToFloat(timeString: dataDescription as! String)
-                    let avg: Float = (oldTime + newTime) / 2
-                    print("\(avg)")
                     
-                    let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime, overallAverage: avg)
+                    let localCount: Int = (document.get("count") as! Int) + 1
+                    let oldTime = dataDescription as! Float
+                    let localTotal: Float = oldTime + newTime
+                    let avg: Float = Float(localTotal / Float(localCount))
+
+                    let changeableTime = Constants.time(changeableTime: timePopUpVC.formattedTime, overallAverage: avg, count: localCount, totalTime: localTotal)
                         
-                    timeCollection.document("time").setData(changeableTime.dictionary, merge: true)
+                    timeCollection.setData(changeableTime.dictionary, merge: true) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written! here")
+                        }
+                    }
                 } else {
-                    print("Document does not exist")
+                    print("Document does not exist yet")
+                    
+                    //initializes document if it doesnt exist
+                    let changeableTime = Constants.time(changeableTime: "00:00 AM", overallAverage: 0.0, count: 1, totalTime: 0.0)
+                        
+                    timeCollection.setData(changeableTime.dictionary, merge: true) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written! here")
+                        }
+                    }
                 }
 
             }
@@ -83,7 +106,7 @@ class HomeViewController: UIViewController {
             }
             //UNCOMMENT FOR FUNCTIONALITY
             
-            prev = document.get("dayOfWeek") as! Int? ?? -1
+            //prev = document.get("dayOfWeek") as! Int? ?? -1
             if(prev == today){
                 self.logTimeButton.isEnabled = false
             }

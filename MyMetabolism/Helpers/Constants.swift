@@ -22,12 +22,16 @@ struct Constants {
     struct time{
         var changeableTime: String
         var overallAverage: Float
+        var count: Int
+        var totalTime: Float
         var dictionary: [String: Any]{
             return[
                 "time": changeableTime,
                 "date": Date(),
                 "dayOfWeek": getDayOfWeek() ?? -1,
-                "overallAverage": overallAverage
+                "overallAverage": overallAverage,
+                "count": count,
+                "totalTime": totalTime
             ]
         }
     }

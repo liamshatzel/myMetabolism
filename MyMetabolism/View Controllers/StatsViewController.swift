@@ -30,15 +30,22 @@ func timeFormat(_ time: Float) -> String{
     let formatted: [String] = (retVal.components(separatedBy: "."))
     var hour = formatted[0]
     var min = formatted[1]
-    let minRound: Int = Int(min)! % 59
+    let minRound: Int = Int(min)! % 60
     min = String(format: "%02d", minRound)
     var hourNum = Int(time) as Int
     var dayNight = ""
-    if(hourNum > 12){
+    print(hourNum)
+    
+    if(hourNum >= 24){
+        hourNum -= 12
+        hour = String(hourNum)
+        dayNight = "AM"
+    }else if(hourNum > 12){
         hourNum -= 12
         hour = String(hourNum)
         dayNight = "PM"
-    } else {
+    }else{
+        hour = String(hourNum)
         dayNight = "AM"
     }
     return "\(hour):\(min) \(dayNight)"
@@ -63,6 +70,8 @@ func timeToFloat(timeString: String) -> Float{
     return Float(hours) + mins
 }
 
+
+
 class StatsViewController: UIViewController{
     @IBOutlet weak var timeFinishLabel: UILabel!
     
@@ -74,6 +83,23 @@ class StatsViewController: UIViewController{
         
         super.viewDidLoad()
         
+        //Sets the timeLabel text when there are no real entries
+        func setTimeLabel(){
+            print("time == 00")
+            let timeRef = Firestore.firestore().collection("users").document(currentUser()).collection("timeList")
+            timeRef.whereField("date", isNotEqualTo: 0).order(by: "date").limit(to: 1).getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        print("\(document.documentID) => \(document.data())")
+                        let timeDone = timeFormat(document.get("time") as! Float)
+                        self.timeFinishLabel.text = timeDone
+                    }
+                }
+            }
+        }
+        
         //Fetches document from Firestore and Sets timeLabel as time set
         docRef.addSnapshotListener { documentSnapshot, error in
             guard let document = documentSnapshot else {
@@ -82,27 +108,24 @@ class StatsViewController: UIViewController{
             }
             
             let getTime = document.get("overallAverage") as! Float?
-            let timeFinish = timeFormat(getTime ?? 0.0)
-            self.timeFinishLabel.text = timeFinish
-            
-            //Formats the date into a string and then into a float
+            if (Float(getTime ?? 0.0) == 0.0) {
+                setTimeLabel()
+            } else {
+                let timeFinish = timeFormat(getTime ?? 0.0)
+                self.timeFinishLabel.text = timeFinish
+            }
             
             switch getTime ?? 0.0{
             case 11...18:
                 self.gradeLabel.text = "😀"
-                print("😀")
             case 19...20:
                 self.gradeLabel.text = "🙂"
-                print("🙂")
             case 21...22:
                 self.gradeLabel.text = "😐"
-                print("😐")
             case 22..<23:
                 self.gradeLabel.text = "😬"
-                print("😬")
             default:
                 self.gradeLabel.text = "😳"
-                print("😳")
             }
         }
     }
