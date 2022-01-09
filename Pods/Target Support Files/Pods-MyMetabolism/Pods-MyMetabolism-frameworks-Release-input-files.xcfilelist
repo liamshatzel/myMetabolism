@@ -1,5 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-MyMetabolism/Pods-MyMetabolism-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
+${BUILT_PRODUCTS_DIR}/Charts/Charts.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseAuthUI/FirebaseAuthUI.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework

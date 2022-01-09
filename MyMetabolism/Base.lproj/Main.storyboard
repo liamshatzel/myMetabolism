@@ -51,7 +51,7 @@
                                 </subviews>
                             </stackView>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metabolism Simplified" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibN-en-A5R">
-                                <rect key="frame" x="115" y="318.5" width="184" height="20.5"/>
+                                <rect key="frame" x="115" y="320.5" width="184" height="20"/>
                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="17"/>
                                 <color key="textColor" name="Text"/>
                                 <nil key="highlightedColor"/>
@@ -60,13 +60,13 @@
                                 <rect key="frame" x="96" y="33" width="222" height="88"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="My Metabolism Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-nd-Cka">
-                                <rect key="frame" x="98" y="151" width="219" height="24"/>
+                                <rect key="frame" x="98" y="151" width="219" height="23.5"/>
                                 <fontDescription key="fontDescription" name="SFPro-Black" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" name="Text"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label verifyAmbiguity="ignoreSizes" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLu-gD-jCy">
-                                <rect key="frame" x="98" y="358" width="218" height="61"/>
+                                <rect key="frame" x="98" y="359.5" width="218" height="59.5"/>
                                 <string key="text">Track your circadian rythms
 in one click
 </string>
@@ -260,7 +260,7 @@ in one click
                                     <constraint firstAttribute="width" constant="265" id="eHa-oN-naM"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Logged Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-8t-EcE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Finished Eating:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLK-8t-EcE">
                                 <rect key="frame" x="60" y="193" width="295" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="295" id="KsH-tw-KlC"/>
@@ -390,29 +390,30 @@ in one click
                                 <color key="textColor" name="Text"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="averageplaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="LKY-bm-bny">
-                                <rect key="frame" x="29" y="254" width="356" height="190"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvx-a7-REX" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="25" y="269" width="369" height="241"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="190" id="Bb4-C0-ut5"/>
-                                    <constraint firstAttribute="width" constant="356" id="pPa-PU-LY0"/>
+                                    <constraint firstAttribute="height" constant="241" id="9zg-cZ-EpB"/>
+                                    <constraint firstAttribute="width" constant="369" id="gId-ed-X2v"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="ddo-Jc-Yg0" secondAttribute="trailing" constant="116" id="0yc-nl-kSw"/>
                             <constraint firstItem="vcJ-3q-yKD" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="87" id="2D0-Bw-QkR"/>
                             <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="vcJ-3q-yKD" secondAttribute="trailing" constant="87" id="2ic-3T-dXm"/>
-                            <constraint firstItem="ddo-Jc-Yg0" firstAttribute="top" secondItem="LKY-bm-bny" secondAttribute="bottom" constant="117" id="D43-cr-qC2"/>
                             <constraint firstItem="mZE-DZ-uWK" firstAttribute="top" secondItem="dw2-q3-4VB" secondAttribute="top" constant="58" id="Hon-sh-uzd"/>
-                            <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="LKY-bm-bny" secondAttribute="trailing" constant="29" id="KGU-zF-leX"/>
+                            <constraint firstItem="gvx-a7-REX" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="25" id="KgW-Zf-GlR"/>
                             <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="nd1-3H-KbJ" secondAttribute="trailing" constant="132" id="LTB-0f-cRw"/>
+                            <constraint firstItem="gvx-a7-REX" firstAttribute="top" secondItem="nca-Oo-5Pu" secondAttribute="bottom" constant="58" id="LTF-5t-xbu"/>
+                            <constraint firstItem="ddo-Jc-Yg0" firstAttribute="top" secondItem="gvx-a7-REX" secondAttribute="bottom" constant="51" id="Mc3-TL-d4l"/>
+                            <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="gvx-a7-REX" secondAttribute="trailing" constant="20" id="O3v-gv-GII"/>
                             <constraint firstItem="kQA-iX-oRw" firstAttribute="top" secondItem="vcJ-3q-yKD" secondAttribute="bottom" constant="8" id="Ok0-gj-OBp"/>
                             <constraint firstItem="nca-Oo-5Pu" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="137" id="R1D-qP-wEm"/>
                             <constraint firstItem="ddo-Jc-Yg0" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="117" id="TH3-Nt-FjG"/>
                             <constraint firstItem="ddo-Jc-Yg0" firstAttribute="top" secondItem="nca-Oo-5Pu" secondAttribute="bottom" constant="350" id="TRz-I8-c85"/>
-                            <constraint firstItem="LKY-bm-bny" firstAttribute="top" secondItem="nca-Oo-5Pu" secondAttribute="bottom" constant="43" id="Ww4-Vv-Xcn"/>
-                            <constraint firstItem="LKY-bm-bny" firstAttribute="leading" secondItem="dw2-q3-4VB" secondAttribute="leading" constant="29" id="cU1-Vu-D8L"/>
                             <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="kQA-iX-oRw" secondAttribute="trailing" constant="144" id="fRI-7E-EfQ"/>
                             <constraint firstItem="kQA-iX-oRw" firstAttribute="top" secondItem="vcJ-3q-yKD" secondAttribute="bottom" constant="8" id="gb0-KY-j14"/>
                             <constraint firstItem="dw2-q3-4VB" firstAttribute="trailing" secondItem="nca-Oo-5Pu" secondAttribute="trailing" constant="136" id="gyh-Jv-zal"/>
@@ -431,6 +432,7 @@ in one click
                     <navigationItem key="navigationItem" id="oSB-xh-by0"/>
                     <connections>
                         <outlet property="gradeLabel" destination="PEQ-WQ-n1k" id="AIS-3y-Jf4"/>
+                        <outlet property="lineChartView" destination="gvx-a7-REX" id="9CG-aU-T88"/>
                         <outlet property="timeFinishLabel" destination="kQA-iX-oRw" id="Yl1-n5-PLq"/>
                     </connections>
                 </viewController>
@@ -638,7 +640,6 @@ in one click
     </scenes>
     <resources>
         <image name="Score" width="188" height="188"/>
-        <image name="averageplaceholder" width="357" height="156"/>
         <image name="chart.pie.fill" catalog="system" width="128" height="124"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="mdi_alarm-check" width="88" height="88"/>
