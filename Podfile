@@ -13,6 +13,7 @@ target 'MyMetabolism' do
 	pod 'Firebase/Auth'
 	pod 'FirebaseUI/Email'
 	pod 'Firebase/Analytics'
-  pod 'Firebase/Core'
-  pod 'Firebase/Firestore'
+  	pod 'Firebase/Core'
+  	pod 'Firebase/Firestore'
+	pod 'Charts'
 end
