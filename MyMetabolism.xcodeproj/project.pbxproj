@@ -341,7 +341,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		261ED6FAF63DCE771612842D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -358,7 +358,7 @@
 		};
 		A49A27C92264C76530933EF0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
